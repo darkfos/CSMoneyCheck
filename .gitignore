@@ -1,3 +1,5 @@
 vnv
 ./venv
 ./vnv
+__pycache__
+./__pycache__
