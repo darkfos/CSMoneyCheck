@@ -1,0 +1,1237 @@
+{
+    "data": {
+        "items": {
+            "paginatorInfo": {
+                "count": 30,
+                "currentPage": 0,
+                "hasMorePages": false,
+                "lastPage": 0,
+                "perPage": 400,
+                "total": 30,
+                "__typename": "ItemsPaginator"
+            },
+            "filters": [
+                {
+                    "id": "search",
+                    "items": [
+                        {
+                            "color": null,
+                            "id": "\u042d\u043b\u0438\u0442\u043d\u043e\u0435 \u0441\u043d\u0430\u0440\u044f\u0436\u0435\u043d\u0438\u0435",
+                            "name": null,
+                            "plural": null,
+                            "icons": null,
+                            "items": null,
+                            "__typename": "FilterItemType"
+                        }
+                    ],
+                    "min_value": null,
+                    "max_value": null,
+                    "min_range": null,
+                    "max_range": null,
+                    "min": null,
+                    "max": null,
+                    "step": null,
+                    "name": "\u041f\u043e\u0438\u0441\u043a \u043f\u043e \u043d\u0430\u0437\u0432\u0430\u043d\u0438\u044e",
+                    "order": 0,
+                    "type": "INPUT",
+                    "value": null,
+                    "open": false,
+                    "__typename": "FilterType"
+                }
+            ],
+            "meta": {
+                "title": null,
+                "description": null,
+                "__typename": "MetaTypeItems"
+            },
+            "data": [
+                {
+                    "color": "D2D2D2",
+                    "id": null,
+                    "currency": "USD",
+                    "stattrak": false,
+                    "slot": "",
+                    "popularity": 135,
+                    "features": null,
+                    "rarity": "\u0417\u0430\u0441\u0435\u043a\u0440\u0435\u0447\u0435\u043d\u043d\u043e\u0435",
+                    "my_item": false,
+                    "rarity_ext": {
+                        "id": "Classified",
+                        "name": "\u0417\u0430\u0441\u0435\u043a\u0440\u0435\u0447\u0435\u043d\u043d\u043e\u0435",
+                        "__typename": "RarityExtraType"
+                    },
+                    "ctp": 12,
+                    "quality": "BS",
+                    "phase": "",
+                    "descriptions": null,
+                    "type": [
+                        "\u0421\u043d\u0430\u0439\u043f\u0435\u0440\u0441\u043a\u0430\u044f \u0432\u0438\u043d\u0442\u043e\u0432\u043a\u0430",
+                        "\u0417\u0430\u0441\u0435\u043a\u0440\u0435\u0447\u0435\u043d\u043d\u043e\u0435"
+                    ],
+                    "tags": null,
+                    "image_512": "https://cdn2.csgo.com/item/AWP%20%7C%20Elite%20Build%20%28Battle-Scarred%29/512.png",
+                    "image_100": "https://cdn2.csgo.com/item/AWP%20%7C%20Elite%20Build%20%28Battle-Scarred%29/100.png",
+                    "image_150": "https://cdn2.csgo.com/item/AWP%20%7C%20Elite%20Build%20%28Battle-Scarred%29/150.png",
+                    "image_300": "https://cdn2.csgo.com/item/AWP%20%7C%20Elite%20Build%20%28Battle-Scarred%29/300.png",
+                    "seo": {
+                        "category": "Sniper Rifle",
+                        "type": "AWP",
+                        "__typename": "SeoType"
+                    },
+                    "market_hash_name": "AWP | Elite Build (Battle-Scarred)",
+                    "market_name": "AWP | \u042d\u043b\u0438\u0442\u043d\u043e\u0435 \u0441\u043d\u0430\u0440\u044f\u0436\u0435\u043d\u0438\u0435 (\u0417\u0430\u043a\u0430\u043b\u0451\u043d\u043d\u043e\u0435 \u0432 \u0431\u043e\u044f\u0445)",
+                    "price": 12.879,
+                    "stickers": [],
+                    "__typename": "ItemType"
+                },
+                {
+                    "color": "CF6A32",
+                    "id": null,
+                    "currency": "USD",
+                    "stattrak": true,
+                    "slot": "",
+                    "popularity": 59,
+                    "features": null,
+                    "rarity": "\u0410\u0440\u043c\u0435\u0439\u0441\u043a\u043e\u0435 \u043a\u0430\u0447\u0435\u0441\u0442\u0432\u043e",
+                    "my_item": false,
+                    "rarity_ext": {
+                        "id": "Mil-Spec Grade",
+                        "name": "\u0410\u0440\u043c\u0435\u0439\u0441\u043a\u043e\u0435 \u043a\u0430\u0447\u0435\u0441\u0442\u0432\u043e",
+                        "__typename": "RarityExtraType"
+                    },
+                    "ctp": 24,
+                    "quality": "MW",
+                    "phase": "",
+                    "descriptions": null,
+                    "type": [
+                        "\u0412\u0438\u043d\u0442\u043e\u0432\u043a\u0430",
+                        "StatTrak\u2122",
+                        "\u0410\u0440\u043c\u0435\u0439\u0441\u043a\u043e\u0435 \u043a\u0430\u0447\u0435\u0441\u0442\u0432\u043e"
+                    ],
+                    "tags": null,
+                    "image_512": "https://cdn2.csgo.com/item/StatTrak%E2%84%A2%20AK-47%20%7C%20Elite%20Build%20%28Minimal%20Wear%29/512.png",
+                    "image_100": "https://cdn2.csgo.com/item/StatTrak%E2%84%A2%20AK-47%20%7C%20Elite%20Build%20%28Minimal%20Wear%29/100.png",
+                    "image_150": "https://cdn2.csgo.com/item/StatTrak%E2%84%A2%20AK-47%20%7C%20Elite%20Build%20%28Minimal%20Wear%29/150.png",
+                    "image_300": "https://cdn2.csgo.com/item/StatTrak%E2%84%A2%20AK-47%20%7C%20Elite%20Build%20%28Minimal%20Wear%29/300.png",
+                    "seo": {
+                        "category": "Rifle",
+                        "type": "AK-47",
+                        "__typename": "SeoType"
+                    },
+                    "market_hash_name": "StatTrak\u2122 AK-47 | Elite Build (Minimal Wear)",
+                    "market_name": "StatTrak\u2122 AK-47 | \u042d\u043b\u0438\u0442\u043d\u043e\u0435 \u0441\u043d\u0430\u0440\u044f\u0436\u0435\u043d\u0438\u0435 (\u041d\u0435\u043c\u043d\u043e\u0433\u043e \u043f\u043e\u043d\u043e\u0448\u0435\u043d\u043d\u043e\u0435)",
+                    "price": 5.905,
+                    "stickers": [],
+                    "__typename": "ItemType"
+                },
+                {
+                    "color": "D2D2D2",
+                    "id": null,
+                    "currency": "USD",
+                    "stattrak": false,
+                    "slot": "",
+                    "popularity": 53,
+                    "features": null,
+                    "rarity": "\u0417\u0430\u0441\u0435\u043a\u0440\u0435\u0447\u0435\u043d\u043d\u043e\u0435",
+                    "my_item": false,
+                    "rarity_ext": {
+                        "id": "Classified",
+                        "name": "\u0417\u0430\u0441\u0435\u043a\u0440\u0435\u0447\u0435\u043d\u043d\u043e\u0435",
+                        "__typename": "RarityExtraType"
+                    },
+                    "ctp": 25,
+                    "quality": "FT",
+                    "phase": "",
+                    "descriptions": null,
+                    "type": [
+                        "\u0421\u043d\u0430\u0439\u043f\u0435\u0440\u0441\u043a\u0430\u044f \u0432\u0438\u043d\u0442\u043e\u0432\u043a\u0430",
+                        "\u0417\u0430\u0441\u0435\u043a\u0440\u0435\u0447\u0435\u043d\u043d\u043e\u0435"
+                    ],
+                    "tags": null,
+                    "image_512": "https://cdn2.csgo.com/item/AWP%20%7C%20Elite%20Build%20%28Field-Tested%29/512.png",
+                    "image_100": "https://cdn2.csgo.com/item/AWP%20%7C%20Elite%20Build%20%28Field-Tested%29/100.png",
+                    "image_150": "https://cdn2.csgo.com/item/AWP%20%7C%20Elite%20Build%20%28Field-Tested%29/150.png",
+                    "image_300": "https://cdn2.csgo.com/item/AWP%20%7C%20Elite%20Build%20%28Field-Tested%29/300.png",
+                    "seo": {
+                        "category": "Sniper Rifle",
+                        "type": "AWP",
+                        "__typename": "SeoType"
+                    },
+                    "market_hash_name": "AWP | Elite Build (Field-Tested)",
+                    "market_name": "AWP | \u042d\u043b\u0438\u0442\u043d\u043e\u0435 \u0441\u043d\u0430\u0440\u044f\u0436\u0435\u043d\u0438\u0435 (\u041f\u043e\u0441\u043b\u0435 \u043f\u043e\u043b\u0435\u0432\u044b\u0445 \u0438\u0441\u043f\u044b\u0442\u0430\u043d\u0438\u0439)",
+                    "price": 13.977,
+                    "stickers": [],
+                    "__typename": "ItemType"
+                },
+                {
+                    "color": "CF6A32",
+                    "id": null,
+                    "currency": "USD",
+                    "stattrak": true,
+                    "slot": "",
+                    "popularity": 48,
+                    "features": null,
+                    "rarity": "\u0417\u0430\u0441\u0435\u043a\u0440\u0435\u0447\u0435\u043d\u043d\u043e\u0435",
+                    "my_item": false,
+                    "rarity_ext": {
+                        "id": "Classified",
+                        "name": "\u0417\u0430\u0441\u0435\u043a\u0440\u0435\u0447\u0435\u043d\u043d\u043e\u0435",
+                        "__typename": "RarityExtraType"
+                    },
+                    "ctp": 5,
+                    "quality": "BS",
+                    "phase": "",
+                    "descriptions": null,
+                    "type": [
+                        "\u0421\u043d\u0430\u0439\u043f\u0435\u0440\u0441\u043a\u0430\u044f \u0432\u0438\u043d\u0442\u043e\u0432\u043a\u0430",
+                        "StatTrak\u2122",
+                        "\u0417\u0430\u0441\u0435\u043a\u0440\u0435\u0447\u0435\u043d\u043d\u043e\u0435"
+                    ],
+                    "tags": null,
+                    "image_512": "https://cdn2.csgo.com/item/StatTrak%E2%84%A2%20AWP%20%7C%20Elite%20Build%20%28Battle-Scarred%29/512.png",
+                    "image_100": "https://cdn2.csgo.com/item/StatTrak%E2%84%A2%20AWP%20%7C%20Elite%20Build%20%28Battle-Scarred%29/100.png",
+                    "image_150": "https://cdn2.csgo.com/item/StatTrak%E2%84%A2%20AWP%20%7C%20Elite%20Build%20%28Battle-Scarred%29/150.png",
+                    "image_300": "https://cdn2.csgo.com/item/StatTrak%E2%84%A2%20AWP%20%7C%20Elite%20Build%20%28Battle-Scarred%29/300.png",
+                    "seo": {
+                        "category": "Sniper Rifle",
+                        "type": "AWP",
+                        "__typename": "SeoType"
+                    },
+                    "market_hash_name": "StatTrak\u2122 AWP | Elite Build (Battle-Scarred)",
+                    "market_name": "StatTrak\u2122 AWP | \u042d\u043b\u0438\u0442\u043d\u043e\u0435 \u0441\u043d\u0430\u0440\u044f\u0436\u0435\u043d\u0438\u0435 (\u0417\u0430\u043a\u0430\u043b\u0451\u043d\u043d\u043e\u0435 \u0432 \u0431\u043e\u044f\u0445)",
+                    "price": 18.49,
+                    "stickers": [],
+                    "__typename": "ItemType"
+                },
+                {
+                    "color": "D2D2D2",
+                    "id": null,
+                    "currency": "USD",
+                    "stattrak": false,
+                    "slot": "",
+                    "popularity": 47,
+                    "features": null,
+                    "rarity": "\u0417\u0430\u0441\u0435\u043a\u0440\u0435\u0447\u0435\u043d\u043d\u043e\u0435",
+                    "my_item": false,
+                    "rarity_ext": {
+                        "id": "Classified",
+                        "name": "\u0417\u0430\u0441\u0435\u043a\u0440\u0435\u0447\u0435\u043d\u043d\u043e\u0435",
+                        "__typename": "RarityExtraType"
+                    },
+                    "ctp": 23,
+                    "quality": "WW",
+                    "phase": "",
+                    "descriptions": null,
+                    "type": [
+                        "\u0421\u043d\u0430\u0439\u043f\u0435\u0440\u0441\u043a\u0430\u044f \u0432\u0438\u043d\u0442\u043e\u0432\u043a\u0430",
+                        "\u0417\u0430\u0441\u0435\u043a\u0440\u0435\u0447\u0435\u043d\u043d\u043e\u0435"
+                    ],
+                    "tags": null,
+                    "image_512": "https://cdn2.csgo.com/item/AWP%20%7C%20Elite%20Build%20%28Well-Worn%29/512.png",
+                    "image_100": "https://cdn2.csgo.com/item/AWP%20%7C%20Elite%20Build%20%28Well-Worn%29/100.png",
+                    "image_150": "https://cdn2.csgo.com/item/AWP%20%7C%20Elite%20Build%20%28Well-Worn%29/150.png",
+                    "image_300": "https://cdn2.csgo.com/item/AWP%20%7C%20Elite%20Build%20%28Well-Worn%29/300.png",
+                    "seo": {
+                        "category": "Sniper Rifle",
+                        "type": "AWP",
+                        "__typename": "SeoType"
+                    },
+                    "market_hash_name": "AWP | Elite Build (Well-Worn)",
+                    "market_name": "AWP | \u042d\u043b\u0438\u0442\u043d\u043e\u0435 \u0441\u043d\u0430\u0440\u044f\u0436\u0435\u043d\u0438\u0435 (\u041f\u043e\u043d\u043e\u0448\u0435\u043d\u043d\u043e\u0435)",
+                    "price": 13.302,
+                    "stickers": [],
+                    "__typename": "ItemType"
+                },
+                {
+                    "color": "D2D2D2",
+                    "id": null,
+                    "currency": "USD",
+                    "stattrak": false,
+                    "slot": "",
+                    "popularity": 35,
+                    "features": null,
+                    "rarity": "\u0410\u0440\u043c\u0435\u0439\u0441\u043a\u043e\u0435 \u043a\u0430\u0447\u0435\u0441\u0442\u0432\u043e",
+                    "my_item": false,
+                    "rarity_ext": {
+                        "id": "Mil-Spec Grade",
+                        "name": "\u0410\u0440\u043c\u0435\u0439\u0441\u043a\u043e\u0435 \u043a\u0430\u0447\u0435\u0441\u0442\u0432\u043e",
+                        "__typename": "RarityExtraType"
+                    },
+                    "ctp": 15,
+                    "quality": "FN",
+                    "phase": "",
+                    "descriptions": null,
+                    "type": [
+                        "\u0412\u0438\u043d\u0442\u043e\u0432\u043a\u0430",
+                        "\u0410\u0440\u043c\u0435\u0439\u0441\u043a\u043e\u0435 \u043a\u0430\u0447\u0435\u0441\u0442\u0432\u043e"
+                    ],
+                    "tags": null,
+                    "image_512": "https://cdn2.csgo.com/item/AK-47%20%7C%20Elite%20Build%20%28Factory%20New%29/512.png",
+                    "image_100": "https://cdn2.csgo.com/item/AK-47%20%7C%20Elite%20Build%20%28Factory%20New%29/100.png",
+                    "image_150": "https://cdn2.csgo.com/item/AK-47%20%7C%20Elite%20Build%20%28Factory%20New%29/150.png",
+                    "image_300": "https://cdn2.csgo.com/item/AK-47%20%7C%20Elite%20Build%20%28Factory%20New%29/300.png",
+                    "seo": {
+                        "category": "Rifle",
+                        "type": "AK-47",
+                        "__typename": "SeoType"
+                    },
+                    "market_hash_name": "AK-47 | Elite Build (Factory New)",
+                    "market_name": "AK-47 | \u042d\u043b\u0438\u0442\u043d\u043e\u0435 \u0441\u043d\u0430\u0440\u044f\u0436\u0435\u043d\u0438\u0435 (\u041f\u0440\u044f\u043c\u043e \u0441 \u0437\u0430\u0432\u043e\u0434\u0430)",
+                    "price": 5.021,
+                    "stickers": [],
+                    "__typename": "ItemType"
+                },
+                {
+                    "color": "CF6A32",
+                    "id": null,
+                    "currency": "USD",
+                    "stattrak": true,
+                    "slot": "",
+                    "popularity": 22,
+                    "features": null,
+                    "rarity": "\u0417\u0430\u0441\u0435\u043a\u0440\u0435\u0447\u0435\u043d\u043d\u043e\u0435",
+                    "my_item": false,
+                    "rarity_ext": {
+                        "id": "Classified",
+                        "name": "\u0417\u0430\u0441\u0435\u043a\u0440\u0435\u0447\u0435\u043d\u043d\u043e\u0435",
+                        "__typename": "RarityExtraType"
+                    },
+                    "ctp": 17,
+                    "quality": "WW",
+                    "phase": "",
+                    "descriptions": null,
+                    "type": [
+                        "\u0421\u043d\u0430\u0439\u043f\u0435\u0440\u0441\u043a\u0430\u044f \u0432\u0438\u043d\u0442\u043e\u0432\u043a\u0430",
+                        "StatTrak\u2122",
+                        "\u0417\u0430\u0441\u0435\u043a\u0440\u0435\u0447\u0435\u043d\u043d\u043e\u0435"
+                    ],
+                    "tags": null,
+                    "image_512": "https://cdn2.csgo.com/item/StatTrak%E2%84%A2%20AWP%20%7C%20Elite%20Build%20%28Well-Worn%29/512.png",
+                    "image_100": "https://cdn2.csgo.com/item/StatTrak%E2%84%A2%20AWP%20%7C%20Elite%20Build%20%28Well-Worn%29/100.png",
+                    "image_150": "https://cdn2.csgo.com/item/StatTrak%E2%84%A2%20AWP%20%7C%20Elite%20Build%20%28Well-Worn%29/150.png",
+                    "image_300": "https://cdn2.csgo.com/item/StatTrak%E2%84%A2%20AWP%20%7C%20Elite%20Build%20%28Well-Worn%29/300.png",
+                    "seo": {
+                        "category": "Sniper Rifle",
+                        "type": "AWP",
+                        "__typename": "SeoType"
+                    },
+                    "market_hash_name": "StatTrak\u2122 AWP | Elite Build (Well-Worn)",
+                    "market_name": "StatTrak\u2122 AWP | \u042d\u043b\u0438\u0442\u043d\u043e\u0435 \u0441\u043d\u0430\u0440\u044f\u0436\u0435\u043d\u0438\u0435 (\u041f\u043e\u043d\u043e\u0448\u0435\u043d\u043d\u043e\u0435)",
+                    "price": 17.999,
+                    "stickers": [],
+                    "__typename": "ItemType"
+                },
+                {
+                    "color": "D2D2D2",
+                    "id": null,
+                    "currency": "USD",
+                    "stattrak": false,
+                    "slot": "",
+                    "popularity": 13,
+                    "features": null,
+                    "rarity": "\u0417\u0430\u0441\u0435\u043a\u0440\u0435\u0447\u0435\u043d\u043d\u043e\u0435",
+                    "my_item": false,
+                    "rarity_ext": {
+                        "id": "Classified",
+                        "name": "\u0417\u0430\u0441\u0435\u043a\u0440\u0435\u0447\u0435\u043d\u043d\u043e\u0435",
+                        "__typename": "RarityExtraType"
+                    },
+                    "ctp": 7,
+                    "quality": "MW",
+                    "phase": "",
+                    "descriptions": null,
+                    "type": [
+                        "\u0421\u043d\u0430\u0439\u043f\u0435\u0440\u0441\u043a\u0430\u044f \u0432\u0438\u043d\u0442\u043e\u0432\u043a\u0430",
+                        "\u0417\u0430\u0441\u0435\u043a\u0440\u0435\u0447\u0435\u043d\u043d\u043e\u0435"
+                    ],
+                    "tags": null,
+                    "image_512": "https://cdn2.csgo.com/item/AWP%20%7C%20Elite%20Build%20%28Minimal%20Wear%29/512.png",
+                    "image_100": "https://cdn2.csgo.com/item/AWP%20%7C%20Elite%20Build%20%28Minimal%20Wear%29/100.png",
+                    "image_150": "https://cdn2.csgo.com/item/AWP%20%7C%20Elite%20Build%20%28Minimal%20Wear%29/150.png",
+                    "image_300": "https://cdn2.csgo.com/item/AWP%20%7C%20Elite%20Build%20%28Minimal%20Wear%29/300.png",
+                    "seo": {
+                        "category": "Sniper Rifle",
+                        "type": "AWP",
+                        "__typename": "SeoType"
+                    },
+                    "market_hash_name": "AWP | Elite Build (Minimal Wear)",
+                    "market_name": "AWP | \u042d\u043b\u0438\u0442\u043d\u043e\u0435 \u0441\u043d\u0430\u0440\u044f\u0436\u0435\u043d\u0438\u0435 (\u041d\u0435\u043c\u043d\u043e\u0433\u043e \u043f\u043e\u043d\u043e\u0448\u0435\u043d\u043d\u043e\u0435)",
+                    "price": 22.55,
+                    "stickers": [],
+                    "__typename": "ItemType"
+                },
+                {
+                    "color": "D2D2D2",
+                    "id": null,
+                    "currency": "USD",
+                    "stattrak": false,
+                    "slot": "",
+                    "popularity": 8,
+                    "features": null,
+                    "rarity": "\u0417\u0430\u0441\u0435\u043a\u0440\u0435\u0447\u0435\u043d\u043d\u043e\u0435",
+                    "my_item": false,
+                    "rarity_ext": {
+                        "id": "Classified",
+                        "name": "\u0417\u0430\u0441\u0435\u043a\u0440\u0435\u0447\u0435\u043d\u043d\u043e\u0435",
+                        "__typename": "RarityExtraType"
+                    },
+                    "ctp": 0,
+                    "quality": "FN",
+                    "phase": "",
+                    "descriptions": null,
+                    "type": [
+                        "\u0421\u043d\u0430\u0439\u043f\u0435\u0440\u0441\u043a\u0430\u044f \u0432\u0438\u043d\u0442\u043e\u0432\u043a\u0430",
+                        "\u0417\u0430\u0441\u0435\u043a\u0440\u0435\u0447\u0435\u043d\u043d\u043e\u0435"
+                    ],
+                    "tags": null,
+                    "image_512": "https://cdn2.csgo.com/item/AWP%20%7C%20Elite%20Build%20%28Factory%20New%29/512.png",
+                    "image_100": "https://cdn2.csgo.com/item/AWP%20%7C%20Elite%20Build%20%28Factory%20New%29/100.png",
+                    "image_150": "https://cdn2.csgo.com/item/AWP%20%7C%20Elite%20Build%20%28Factory%20New%29/150.png",
+                    "image_300": "https://cdn2.csgo.com/item/AWP%20%7C%20Elite%20Build%20%28Factory%20New%29/300.png",
+                    "seo": {
+                        "category": "Sniper Rifle",
+                        "type": "AWP",
+                        "__typename": "SeoType"
+                    },
+                    "market_hash_name": "AWP | Elite Build (Factory New)",
+                    "market_name": "AWP | \u042d\u043b\u0438\u0442\u043d\u043e\u0435 \u0441\u043d\u0430\u0440\u044f\u0436\u0435\u043d\u0438\u0435 (\u041f\u0440\u044f\u043c\u043e \u0441 \u0437\u0430\u0432\u043e\u0434\u0430)",
+                    "price": 36.856,
+                    "stickers": [],
+                    "__typename": "ItemType"
+                },
+                {
+                    "color": "CF6A32",
+                    "id": null,
+                    "currency": "USD",
+                    "stattrak": true,
+                    "slot": "",
+                    "popularity": 6,
+                    "features": null,
+                    "rarity": "\u0417\u0430\u0441\u0435\u043a\u0440\u0435\u0447\u0435\u043d\u043d\u043e\u0435",
+                    "my_item": false,
+                    "rarity_ext": {
+                        "id": "Classified",
+                        "name": "\u0417\u0430\u0441\u0435\u043a\u0440\u0435\u0447\u0435\u043d\u043d\u043e\u0435",
+                        "__typename": "RarityExtraType"
+                    },
+                    "ctp": 15,
+                    "quality": "FT",
+                    "phase": "",
+                    "descriptions": null,
+                    "type": [
+                        "\u0421\u043d\u0430\u0439\u043f\u0435\u0440\u0441\u043a\u0430\u044f \u0432\u0438\u043d\u0442\u043e\u0432\u043a\u0430",
+                        "StatTrak\u2122",
+                        "\u0417\u0430\u0441\u0435\u043a\u0440\u0435\u0447\u0435\u043d\u043d\u043e\u0435"
+                    ],
+                    "tags": null,
+                    "image_512": "https://cdn2.csgo.com/item/StatTrak%E2%84%A2%20AWP%20%7C%20Elite%20Build%20%28Field-Tested%29/512.png",
+                    "image_100": "https://cdn2.csgo.com/item/StatTrak%E2%84%A2%20AWP%20%7C%20Elite%20Build%20%28Field-Tested%29/100.png",
+                    "image_150": "https://cdn2.csgo.com/item/StatTrak%E2%84%A2%20AWP%20%7C%20Elite%20Build%20%28Field-Tested%29/150.png",
+                    "image_300": "https://cdn2.csgo.com/item/StatTrak%E2%84%A2%20AWP%20%7C%20Elite%20Build%20%28Field-Tested%29/300.png",
+                    "seo": {
+                        "category": "Sniper Rifle",
+                        "type": "AWP",
+                        "__typename": "SeoType"
+                    },
+                    "market_hash_name": "StatTrak\u2122 AWP | Elite Build (Field-Tested)",
+                    "market_name": "StatTrak\u2122 AWP | \u042d\u043b\u0438\u0442\u043d\u043e\u0435 \u0441\u043d\u0430\u0440\u044f\u0436\u0435\u043d\u0438\u0435 (\u041f\u043e\u0441\u043b\u0435 \u043f\u043e\u043b\u0435\u0432\u044b\u0445 \u0438\u0441\u043f\u044b\u0442\u0430\u043d\u0438\u0439)",
+                    "price": 24.603,
+                    "stickers": [],
+                    "__typename": "ItemType"
+                },
+                {
+                    "color": "CF6A32",
+                    "id": null,
+                    "currency": "USD",
+                    "stattrak": true,
+                    "slot": "",
+                    "popularity": 6,
+                    "features": null,
+                    "rarity": "\u0410\u0440\u043c\u0435\u0439\u0441\u043a\u043e\u0435 \u043a\u0430\u0447\u0435\u0441\u0442\u0432\u043e",
+                    "my_item": false,
+                    "rarity_ext": {
+                        "id": "Mil-Spec Grade",
+                        "name": "\u0410\u0440\u043c\u0435\u0439\u0441\u043a\u043e\u0435 \u043a\u0430\u0447\u0435\u0441\u0442\u0432\u043e",
+                        "__typename": "RarityExtraType"
+                    },
+                    "ctp": 24,
+                    "quality": "FN",
+                    "phase": "",
+                    "descriptions": null,
+                    "type": [
+                        "\u0412\u0438\u043d\u0442\u043e\u0432\u043a\u0430",
+                        "StatTrak\u2122",
+                        "\u0410\u0440\u043c\u0435\u0439\u0441\u043a\u043e\u0435 \u043a\u0430\u0447\u0435\u0441\u0442\u0432\u043e"
+                    ],
+                    "tags": null,
+                    "image_512": "https://cdn2.csgo.com/item/StatTrak%E2%84%A2%20AK-47%20%7C%20Elite%20Build%20%28Factory%20New%29/512.png",
+                    "image_100": "https://cdn2.csgo.com/item/StatTrak%E2%84%A2%20AK-47%20%7C%20Elite%20Build%20%28Factory%20New%29/100.png",
+                    "image_150": "https://cdn2.csgo.com/item/StatTrak%E2%84%A2%20AK-47%20%7C%20Elite%20Build%20%28Factory%20New%29/150.png",
+                    "image_300": "https://cdn2.csgo.com/item/StatTrak%E2%84%A2%20AK-47%20%7C%20Elite%20Build%20%28Factory%20New%29/300.png",
+                    "seo": {
+                        "category": "Rifle",
+                        "type": "AK-47",
+                        "__typename": "SeoType"
+                    },
+                    "market_hash_name": "StatTrak\u2122 AK-47 | Elite Build (Factory New)",
+                    "market_name": "StatTrak\u2122 AK-47 | \u042d\u043b\u0438\u0442\u043d\u043e\u0435 \u0441\u043d\u0430\u0440\u044f\u0436\u0435\u043d\u0438\u0435 (\u041f\u0440\u044f\u043c\u043e \u0441 \u0437\u0430\u0432\u043e\u0434\u0430)",
+                    "price": 21.822,
+                    "stickers": [],
+                    "__typename": "ItemType"
+                },
+                {
+                    "color": "CF6A32",
+                    "id": null,
+                    "currency": "USD",
+                    "stattrak": true,
+                    "slot": "",
+                    "popularity": 3,
+                    "features": null,
+                    "rarity": "\u0410\u0440\u043c\u0435\u0439\u0441\u043a\u043e\u0435 \u043a\u0430\u0447\u0435\u0441\u0442\u0432\u043e",
+                    "my_item": false,
+                    "rarity_ext": {
+                        "id": "Mil-Spec Grade",
+                        "name": "\u0410\u0440\u043c\u0435\u0439\u0441\u043a\u043e\u0435 \u043a\u0430\u0447\u0435\u0441\u0442\u0432\u043e",
+                        "__typename": "RarityExtraType"
+                    },
+                    "ctp": 27,
+                    "quality": "FN",
+                    "phase": "",
+                    "descriptions": null,
+                    "type": [
+                        "\u041f\u0438\u0441\u0442\u043e\u043b\u0435\u0442-\u043f\u0443\u043b\u0435\u043c\u0451\u0442",
+                        "StatTrak\u2122",
+                        "\u0410\u0440\u043c\u0435\u0439\u0441\u043a\u043e\u0435 \u043a\u0430\u0447\u0435\u0441\u0442\u0432\u043e"
+                    ],
+                    "tags": null,
+                    "image_512": "https://cdn2.csgo.com/item/StatTrak%E2%84%A2%20P90%20%7C%20Elite%20Build%20%28Factory%20New%29/512.png",
+                    "image_100": "https://cdn2.csgo.com/item/StatTrak%E2%84%A2%20P90%20%7C%20Elite%20Build%20%28Factory%20New%29/100.png",
+                    "image_150": "https://cdn2.csgo.com/item/StatTrak%E2%84%A2%20P90%20%7C%20Elite%20Build%20%28Factory%20New%29/150.png",
+                    "image_300": "https://cdn2.csgo.com/item/StatTrak%E2%84%A2%20P90%20%7C%20Elite%20Build%20%28Factory%20New%29/300.png",
+                    "seo": {
+                        "category": "SMG",
+                        "type": "P90",
+                        "__typename": "SeoType"
+                    },
+                    "market_hash_name": "StatTrak\u2122 P90 | Elite Build (Factory New)",
+                    "market_name": "StatTrak\u2122 P90 | \u042d\u043b\u0438\u0442\u043d\u043e\u0435 \u0441\u043d\u0430\u0440\u044f\u0436\u0435\u043d\u0438\u0435 (\u041f\u0440\u044f\u043c\u043e \u0441 \u0437\u0430\u0432\u043e\u0434\u0430)",
+                    "price": 4.6,
+                    "stickers": [],
+                    "__typename": "ItemType"
+                },
+                {
+                    "color": "CF6A32",
+                    "id": null,
+                    "currency": "USD",
+                    "stattrak": true,
+                    "slot": "",
+                    "popularity": 2,
+                    "features": null,
+                    "rarity": "\u0417\u0430\u0441\u0435\u043a\u0440\u0435\u0447\u0435\u043d\u043d\u043e\u0435",
+                    "my_item": false,
+                    "rarity_ext": {
+                        "id": "Classified",
+                        "name": "\u0417\u0430\u0441\u0435\u043a\u0440\u0435\u0447\u0435\u043d\u043d\u043e\u0435",
+                        "__typename": "RarityExtraType"
+                    },
+                    "ctp": 17,
+                    "quality": "MW",
+                    "phase": "",
+                    "descriptions": null,
+                    "type": [
+                        "\u0421\u043d\u0430\u0439\u043f\u0435\u0440\u0441\u043a\u0430\u044f \u0432\u0438\u043d\u0442\u043e\u0432\u043a\u0430",
+                        "StatTrak\u2122",
+                        "\u0417\u0430\u0441\u0435\u043a\u0440\u0435\u0447\u0435\u043d\u043d\u043e\u0435"
+                    ],
+                    "tags": null,
+                    "image_512": "https://cdn2.csgo.com/item/StatTrak%E2%84%A2%20AWP%20%7C%20Elite%20Build%20%28Minimal%20Wear%29/512.png",
+                    "image_100": "https://cdn2.csgo.com/item/StatTrak%E2%84%A2%20AWP%20%7C%20Elite%20Build%20%28Minimal%20Wear%29/100.png",
+                    "image_150": "https://cdn2.csgo.com/item/StatTrak%E2%84%A2%20AWP%20%7C%20Elite%20Build%20%28Minimal%20Wear%29/150.png",
+                    "image_300": "https://cdn2.csgo.com/item/StatTrak%E2%84%A2%20AWP%20%7C%20Elite%20Build%20%28Minimal%20Wear%29/300.png",
+                    "seo": {
+                        "category": "Sniper Rifle",
+                        "type": "AWP",
+                        "__typename": "SeoType"
+                    },
+                    "market_hash_name": "StatTrak\u2122 AWP | Elite Build (Minimal Wear)",
+                    "market_name": "StatTrak\u2122 AWP | \u042d\u043b\u0438\u0442\u043d\u043e\u0435 \u0441\u043d\u0430\u0440\u044f\u0436\u0435\u043d\u0438\u0435 (\u041d\u0435\u043c\u043d\u043e\u0433\u043e \u043f\u043e\u043d\u043e\u0448\u0435\u043d\u043d\u043e\u0435)",
+                    "price": 36.999,
+                    "stickers": [],
+                    "__typename": "ItemType"
+                },
+                {
+                    "color": "CF6A32",
+                    "id": null,
+                    "currency": "USD",
+                    "stattrak": true,
+                    "slot": "",
+                    "popularity": 1,
+                    "features": null,
+                    "rarity": "\u0417\u0430\u0441\u0435\u043a\u0440\u0435\u0447\u0435\u043d\u043d\u043e\u0435",
+                    "my_item": false,
+                    "rarity_ext": {
+                        "id": "Classified",
+                        "name": "\u0417\u0430\u0441\u0435\u043a\u0440\u0435\u0447\u0435\u043d\u043d\u043e\u0435",
+                        "__typename": "RarityExtraType"
+                    },
+                    "ctp": 23,
+                    "quality": "FN",
+                    "phase": "",
+                    "descriptions": null,
+                    "type": [
+                        "\u0421\u043d\u0430\u0439\u043f\u0435\u0440\u0441\u043a\u0430\u044f \u0432\u0438\u043d\u0442\u043e\u0432\u043a\u0430",
+                        "StatTrak\u2122",
+                        "\u0417\u0430\u0441\u0435\u043a\u0440\u0435\u0447\u0435\u043d\u043d\u043e\u0435"
+                    ],
+                    "tags": null,
+                    "image_512": "https://cdn2.csgo.com/item/StatTrak%E2%84%A2%20AWP%20%7C%20Elite%20Build%20%28Factory%20New%29/512.png",
+                    "image_100": "https://cdn2.csgo.com/item/StatTrak%E2%84%A2%20AWP%20%7C%20Elite%20Build%20%28Factory%20New%29/100.png",
+                    "image_150": "https://cdn2.csgo.com/item/StatTrak%E2%84%A2%20AWP%20%7C%20Elite%20Build%20%28Factory%20New%29/150.png",
+                    "image_300": "https://cdn2.csgo.com/item/StatTrak%E2%84%A2%20AWP%20%7C%20Elite%20Build%20%28Factory%20New%29/300.png",
+                    "seo": {
+                        "category": "Sniper Rifle",
+                        "type": "AWP",
+                        "__typename": "SeoType"
+                    },
+                    "market_hash_name": "StatTrak\u2122 AWP | Elite Build (Factory New)",
+                    "market_name": "StatTrak\u2122 AWP | \u042d\u043b\u0438\u0442\u043d\u043e\u0435 \u0441\u043d\u0430\u0440\u044f\u0436\u0435\u043d\u0438\u0435 (\u041f\u0440\u044f\u043c\u043e \u0441 \u0437\u0430\u0432\u043e\u0434\u0430)",
+                    "price": 58.42,
+                    "stickers": [],
+                    "__typename": "ItemType"
+                },
+                {
+                    "color": "D2D2D2",
+                    "id": null,
+                    "currency": "USD",
+                    "stattrak": false,
+                    "slot": "",
+                    "popularity": 38,
+                    "features": null,
+                    "rarity": "\u0410\u0440\u043c\u0435\u0439\u0441\u043a\u043e\u0435 \u043a\u0430\u0447\u0435\u0441\u0442\u0432\u043e",
+                    "my_item": false,
+                    "rarity_ext": {
+                        "id": "Mil-Spec Grade",
+                        "name": "\u0410\u0440\u043c\u0435\u0439\u0441\u043a\u043e\u0435 \u043a\u0430\u0447\u0435\u0441\u0442\u0432\u043e",
+                        "__typename": "RarityExtraType"
+                    },
+                    "ctp": 4,
+                    "quality": "FT",
+                    "phase": "",
+                    "descriptions": null,
+                    "type": [
+                        "\u041f\u0438\u0441\u0442\u043e\u043b\u0435\u0442-\u043f\u0443\u043b\u0435\u043c\u0451\u0442",
+                        "\u0410\u0440\u043c\u0435\u0439\u0441\u043a\u043e\u0435 \u043a\u0430\u0447\u0435\u0441\u0442\u0432\u043e"
+                    ],
+                    "tags": null,
+                    "image_512": "https://cdn2.csgo.com/item/P90%20%7C%20Elite%20Build%20%28Field-Tested%29/512.png",
+                    "image_100": "https://cdn2.csgo.com/item/P90%20%7C%20Elite%20Build%20%28Field-Tested%29/100.png",
+                    "image_150": "https://cdn2.csgo.com/item/P90%20%7C%20Elite%20Build%20%28Field-Tested%29/150.png",
+                    "image_300": "https://cdn2.csgo.com/item/P90%20%7C%20Elite%20Build%20%28Field-Tested%29/300.png",
+                    "seo": {
+                        "category": "SMG",
+                        "type": "P90",
+                        "__typename": "SeoType"
+                    },
+                    "market_hash_name": "P90 | Elite Build (Field-Tested)",
+                    "market_name": "P90 | \u042d\u043b\u0438\u0442\u043d\u043e\u0435 \u0441\u043d\u0430\u0440\u044f\u0436\u0435\u043d\u0438\u0435 (\u041f\u043e\u0441\u043b\u0435 \u043f\u043e\u043b\u0435\u0432\u044b\u0445 \u0438\u0441\u043f\u044b\u0442\u0430\u043d\u0438\u0439)",
+                    "price": 0.249,
+                    "stickers": [],
+                    "__typename": "ItemType"
+                },
+                {
+                    "color": "D2D2D2",
+                    "id": null,
+                    "currency": "USD",
+                    "stattrak": false,
+                    "slot": "",
+                    "popularity": 33,
+                    "features": null,
+                    "rarity": "\u0410\u0440\u043c\u0435\u0439\u0441\u043a\u043e\u0435 \u043a\u0430\u0447\u0435\u0441\u0442\u0432\u043e",
+                    "my_item": false,
+                    "rarity_ext": {
+                        "id": "Mil-Spec Grade",
+                        "name": "\u0410\u0440\u043c\u0435\u0439\u0441\u043a\u043e\u0435 \u043a\u0430\u0447\u0435\u0441\u0442\u0432\u043e",
+                        "__typename": "RarityExtraType"
+                    },
+                    "ctp": 24,
+                    "quality": "WW",
+                    "phase": "",
+                    "descriptions": null,
+                    "type": [
+                        "\u041f\u0438\u0441\u0442\u043e\u043b\u0435\u0442-\u043f\u0443\u043b\u0435\u043c\u0451\u0442",
+                        "\u0410\u0440\u043c\u0435\u0439\u0441\u043a\u043e\u0435 \u043a\u0430\u0447\u0435\u0441\u0442\u0432\u043e"
+                    ],
+                    "tags": null,
+                    "image_512": "https://cdn2.csgo.com/item/P90%20%7C%20Elite%20Build%20%28Well-Worn%29/512.png",
+                    "image_100": "https://cdn2.csgo.com/item/P90%20%7C%20Elite%20Build%20%28Well-Worn%29/100.png",
+                    "image_150": "https://cdn2.csgo.com/item/P90%20%7C%20Elite%20Build%20%28Well-Worn%29/150.png",
+                    "image_300": "https://cdn2.csgo.com/item/P90%20%7C%20Elite%20Build%20%28Well-Worn%29/300.png",
+                    "seo": {
+                        "category": "SMG",
+                        "type": "P90",
+                        "__typename": "SeoType"
+                    },
+                    "market_hash_name": "P90 | Elite Build (Well-Worn)",
+                    "market_name": "P90 | \u042d\u043b\u0438\u0442\u043d\u043e\u0435 \u0441\u043d\u0430\u0440\u044f\u0436\u0435\u043d\u0438\u0435 (\u041f\u043e\u043d\u043e\u0448\u0435\u043d\u043d\u043e\u0435)",
+                    "price": 0.159,
+                    "stickers": [],
+                    "__typename": "ItemType"
+                },
+                {
+                    "color": "D2D2D2",
+                    "id": null,
+                    "currency": "USD",
+                    "stattrak": false,
+                    "slot": "",
+                    "popularity": 9,
+                    "features": null,
+                    "rarity": "\u0410\u0440\u043c\u0435\u0439\u0441\u043a\u043e\u0435 \u043a\u0430\u0447\u0435\u0441\u0442\u0432\u043e",
+                    "my_item": false,
+                    "rarity_ext": {
+                        "id": "Mil-Spec Grade",
+                        "name": "\u0410\u0440\u043c\u0435\u0439\u0441\u043a\u043e\u0435 \u043a\u0430\u0447\u0435\u0441\u0442\u0432\u043e",
+                        "__typename": "RarityExtraType"
+                    },
+                    "ctp": 0,
+                    "quality": "FN",
+                    "phase": "",
+                    "descriptions": null,
+                    "type": [
+                        "\u041f\u0438\u0441\u0442\u043e\u043b\u0435\u0442-\u043f\u0443\u043b\u0435\u043c\u0451\u0442",
+                        "\u0410\u0440\u043c\u0435\u0439\u0441\u043a\u043e\u0435 \u043a\u0430\u0447\u0435\u0441\u0442\u0432\u043e"
+                    ],
+                    "tags": null,
+                    "image_512": "https://cdn2.csgo.com/item/P90%20%7C%20Elite%20Build%20%28Factory%20New%29/512.png",
+                    "image_100": "https://cdn2.csgo.com/item/P90%20%7C%20Elite%20Build%20%28Factory%20New%29/100.png",
+                    "image_150": "https://cdn2.csgo.com/item/P90%20%7C%20Elite%20Build%20%28Factory%20New%29/150.png",
+                    "image_300": "https://cdn2.csgo.com/item/P90%20%7C%20Elite%20Build%20%28Factory%20New%29/300.png",
+                    "seo": {
+                        "category": "SMG",
+                        "type": "P90",
+                        "__typename": "SeoType"
+                    },
+                    "market_hash_name": "P90 | Elite Build (Factory New)",
+                    "market_name": "P90 | \u042d\u043b\u0438\u0442\u043d\u043e\u0435 \u0441\u043d\u0430\u0440\u044f\u0436\u0435\u043d\u0438\u0435 (\u041f\u0440\u044f\u043c\u043e \u0441 \u0437\u0430\u0432\u043e\u0434\u0430)",
+                    "price": 1.004,
+                    "stickers": [],
+                    "__typename": "ItemType"
+                },
+                {
+                    "color": "D2D2D2",
+                    "id": null,
+                    "currency": "USD",
+                    "stattrak": false,
+                    "slot": "",
+                    "popularity": 77,
+                    "features": null,
+                    "rarity": "\u0410\u0440\u043c\u0435\u0439\u0441\u043a\u043e\u0435 \u043a\u0430\u0447\u0435\u0441\u0442\u0432\u043e",
+                    "my_item": false,
+                    "rarity_ext": {
+                        "id": "Mil-Spec Grade",
+                        "name": "\u0410\u0440\u043c\u0435\u0439\u0441\u043a\u043e\u0435 \u043a\u0430\u0447\u0435\u0441\u0442\u0432\u043e",
+                        "__typename": "RarityExtraType"
+                    },
+                    "ctp": 2,
+                    "quality": "MW",
+                    "phase": "",
+                    "descriptions": null,
+                    "type": [
+                        "\u041f\u0438\u0441\u0442\u043e\u043b\u0435\u0442-\u043f\u0443\u043b\u0435\u043c\u0451\u0442",
+                        "\u0410\u0440\u043c\u0435\u0439\u0441\u043a\u043e\u0435 \u043a\u0430\u0447\u0435\u0441\u0442\u0432\u043e"
+                    ],
+                    "tags": null,
+                    "image_512": "https://cdn2.csgo.com/item/P90%20%7C%20Elite%20Build%20%28Minimal%20Wear%29/512.png",
+                    "image_100": "https://cdn2.csgo.com/item/P90%20%7C%20Elite%20Build%20%28Minimal%20Wear%29/100.png",
+                    "image_150": "https://cdn2.csgo.com/item/P90%20%7C%20Elite%20Build%20%28Minimal%20Wear%29/150.png",
+                    "image_300": "https://cdn2.csgo.com/item/P90%20%7C%20Elite%20Build%20%28Minimal%20Wear%29/300.png",
+                    "seo": {
+                        "category": "SMG",
+                        "type": "P90",
+                        "__typename": "SeoType"
+                    },
+                    "market_hash_name": "P90 | Elite Build (Minimal Wear)",
+                    "market_name": "P90 | \u042d\u043b\u0438\u0442\u043d\u043e\u0435 \u0441\u043d\u0430\u0440\u044f\u0436\u0435\u043d\u0438\u0435 (\u041d\u0435\u043c\u043d\u043e\u0433\u043e \u043f\u043e\u043d\u043e\u0448\u0435\u043d\u043d\u043e\u0435)",
+                    "price": 0.284,
+                    "stickers": [],
+                    "__typename": "ItemType"
+                },
+                {
+                    "color": "D2D2D2",
+                    "id": null,
+                    "currency": "USD",
+                    "stattrak": false,
+                    "slot": "",
+                    "popularity": 22,
+                    "features": null,
+                    "rarity": "\u0410\u0440\u043c\u0435\u0439\u0441\u043a\u043e\u0435 \u043a\u0430\u0447\u0435\u0441\u0442\u0432\u043e",
+                    "my_item": false,
+                    "rarity_ext": {
+                        "id": "Mil-Spec Grade",
+                        "name": "\u0410\u0440\u043c\u0435\u0439\u0441\u043a\u043e\u0435 \u043a\u0430\u0447\u0435\u0441\u0442\u0432\u043e",
+                        "__typename": "RarityExtraType"
+                    },
+                    "ctp": 14,
+                    "quality": "BS",
+                    "phase": "",
+                    "descriptions": null,
+                    "type": [
+                        "\u041f\u0438\u0441\u0442\u043e\u043b\u0435\u0442-\u043f\u0443\u043b\u0435\u043c\u0451\u0442",
+                        "\u0410\u0440\u043c\u0435\u0439\u0441\u043a\u043e\u0435 \u043a\u0430\u0447\u0435\u0441\u0442\u0432\u043e"
+                    ],
+                    "tags": null,
+                    "image_512": "https://cdn2.csgo.com/item/P90%20%7C%20Elite%20Build%20%28Battle-Scarred%29/512.png",
+                    "image_100": "https://cdn2.csgo.com/item/P90%20%7C%20Elite%20Build%20%28Battle-Scarred%29/100.png",
+                    "image_150": "https://cdn2.csgo.com/item/P90%20%7C%20Elite%20Build%20%28Battle-Scarred%29/150.png",
+                    "image_300": "https://cdn2.csgo.com/item/P90%20%7C%20Elite%20Build%20%28Battle-Scarred%29/300.png",
+                    "seo": {
+                        "category": "SMG",
+                        "type": "P90",
+                        "__typename": "SeoType"
+                    },
+                    "market_hash_name": "P90 | Elite Build (Battle-Scarred)",
+                    "market_name": "P90 | \u042d\u043b\u0438\u0442\u043d\u043e\u0435 \u0441\u043d\u0430\u0440\u044f\u0436\u0435\u043d\u0438\u0435 (\u0417\u0430\u043a\u0430\u043b\u0451\u043d\u043d\u043e\u0435 \u0432 \u0431\u043e\u044f\u0445)",
+                    "price": 0.18,
+                    "stickers": [],
+                    "__typename": "ItemType"
+                },
+                {
+                    "color": "D2D2D2",
+                    "id": null,
+                    "currency": "USD",
+                    "stattrak": false,
+                    "slot": "",
+                    "popularity": 329,
+                    "features": null,
+                    "rarity": "\u0410\u0440\u043c\u0435\u0439\u0441\u043a\u043e\u0435 \u043a\u0430\u0447\u0435\u0441\u0442\u0432\u043e",
+                    "my_item": false,
+                    "rarity_ext": {
+                        "id": "Mil-Spec Grade",
+                        "name": "\u0410\u0440\u043c\u0435\u0439\u0441\u043a\u043e\u0435 \u043a\u0430\u0447\u0435\u0441\u0442\u0432\u043e",
+                        "__typename": "RarityExtraType"
+                    },
+                    "ctp": 14,
+                    "quality": "BS",
+                    "phase": "",
+                    "descriptions": null,
+                    "type": [
+                        "\u0412\u0438\u043d\u0442\u043e\u0432\u043a\u0430",
+                        "\u0410\u0440\u043c\u0435\u0439\u0441\u043a\u043e\u0435 \u043a\u0430\u0447\u0435\u0441\u0442\u0432\u043e"
+                    ],
+                    "tags": null,
+                    "image_512": "https://cdn2.csgo.com/item/AK-47%20%7C%20Elite%20Build%20%28Battle-Scarred%29/512.png",
+                    "image_100": "https://cdn2.csgo.com/item/AK-47%20%7C%20Elite%20Build%20%28Battle-Scarred%29/100.png",
+                    "image_150": "https://cdn2.csgo.com/item/AK-47%20%7C%20Elite%20Build%20%28Battle-Scarred%29/150.png",
+                    "image_300": "https://cdn2.csgo.com/item/AK-47%20%7C%20Elite%20Build%20%28Battle-Scarred%29/300.png",
+                    "seo": {
+                        "category": "Rifle",
+                        "type": "AK-47",
+                        "__typename": "SeoType"
+                    },
+                    "market_hash_name": "AK-47 | Elite Build (Battle-Scarred)",
+                    "market_name": "AK-47 | \u042d\u043b\u0438\u0442\u043d\u043e\u0435 \u0441\u043d\u0430\u0440\u044f\u0436\u0435\u043d\u0438\u0435 (\u0417\u0430\u043a\u0430\u043b\u0451\u043d\u043d\u043e\u0435 \u0432 \u0431\u043e\u044f\u0445)",
+                    "price": 0.829,
+                    "stickers": [],
+                    "__typename": "ItemType"
+                },
+                {
+                    "color": "D2D2D2",
+                    "id": null,
+                    "currency": "USD",
+                    "stattrak": false,
+                    "slot": "",
+                    "popularity": 228,
+                    "features": null,
+                    "rarity": "\u0410\u0440\u043c\u0435\u0439\u0441\u043a\u043e\u0435 \u043a\u0430\u0447\u0435\u0441\u0442\u0432\u043e",
+                    "my_item": false,
+                    "rarity_ext": {
+                        "id": "Mil-Spec Grade",
+                        "name": "\u0410\u0440\u043c\u0435\u0439\u0441\u043a\u043e\u0435 \u043a\u0430\u0447\u0435\u0441\u0442\u0432\u043e",
+                        "__typename": "RarityExtraType"
+                    },
+                    "ctp": 30,
+                    "quality": "FT",
+                    "phase": "",
+                    "descriptions": null,
+                    "type": [
+                        "\u0412\u0438\u043d\u0442\u043e\u0432\u043a\u0430",
+                        "\u0410\u0440\u043c\u0435\u0439\u0441\u043a\u043e\u0435 \u043a\u0430\u0447\u0435\u0441\u0442\u0432\u043e"
+                    ],
+                    "tags": null,
+                    "image_512": "https://cdn2.csgo.com/item/AK-47%20%7C%20Elite%20Build%20%28Field-Tested%29/512.png",
+                    "image_100": "https://cdn2.csgo.com/item/AK-47%20%7C%20Elite%20Build%20%28Field-Tested%29/100.png",
+                    "image_150": "https://cdn2.csgo.com/item/AK-47%20%7C%20Elite%20Build%20%28Field-Tested%29/150.png",
+                    "image_300": "https://cdn2.csgo.com/item/AK-47%20%7C%20Elite%20Build%20%28Field-Tested%29/300.png",
+                    "seo": {
+                        "category": "Rifle",
+                        "type": "AK-47",
+                        "__typename": "SeoType"
+                    },
+                    "market_hash_name": "AK-47 | Elite Build (Field-Tested)",
+                    "market_name": "AK-47 | \u042d\u043b\u0438\u0442\u043d\u043e\u0435 \u0441\u043d\u0430\u0440\u044f\u0436\u0435\u043d\u0438\u0435 (\u041f\u043e\u0441\u043b\u0435 \u043f\u043e\u043b\u0435\u0432\u044b\u0445 \u0438\u0441\u043f\u044b\u0442\u0430\u043d\u0438\u0439)",
+                    "price": 0.988,
+                    "stickers": [],
+                    "__typename": "ItemType"
+                },
+                {
+                    "color": "D2D2D2",
+                    "id": null,
+                    "currency": "USD",
+                    "stattrak": false,
+                    "slot": "",
+                    "popularity": 155,
+                    "features": null,
+                    "rarity": "\u0410\u0440\u043c\u0435\u0439\u0441\u043a\u043e\u0435 \u043a\u0430\u0447\u0435\u0441\u0442\u0432\u043e",
+                    "my_item": false,
+                    "rarity_ext": {
+                        "id": "Mil-Spec Grade",
+                        "name": "\u0410\u0440\u043c\u0435\u0439\u0441\u043a\u043e\u0435 \u043a\u0430\u0447\u0435\u0441\u0442\u0432\u043e",
+                        "__typename": "RarityExtraType"
+                    },
+                    "ctp": 23,
+                    "quality": "MW",
+                    "phase": "",
+                    "descriptions": null,
+                    "type": [
+                        "\u0412\u0438\u043d\u0442\u043e\u0432\u043a\u0430",
+                        "\u0410\u0440\u043c\u0435\u0439\u0441\u043a\u043e\u0435 \u043a\u0430\u0447\u0435\u0441\u0442\u0432\u043e"
+                    ],
+                    "tags": null,
+                    "image_512": "https://cdn2.csgo.com/item/AK-47%20%7C%20Elite%20Build%20%28Minimal%20Wear%29/512.png",
+                    "image_100": "https://cdn2.csgo.com/item/AK-47%20%7C%20Elite%20Build%20%28Minimal%20Wear%29/100.png",
+                    "image_150": "https://cdn2.csgo.com/item/AK-47%20%7C%20Elite%20Build%20%28Minimal%20Wear%29/150.png",
+                    "image_300": "https://cdn2.csgo.com/item/AK-47%20%7C%20Elite%20Build%20%28Minimal%20Wear%29/300.png",
+                    "seo": {
+                        "category": "Rifle",
+                        "type": "AK-47",
+                        "__typename": "SeoType"
+                    },
+                    "market_hash_name": "AK-47 | Elite Build (Minimal Wear)",
+                    "market_name": "AK-47 | \u042d\u043b\u0438\u0442\u043d\u043e\u0435 \u0441\u043d\u0430\u0440\u044f\u0436\u0435\u043d\u0438\u0435 (\u041d\u0435\u043c\u043d\u043e\u0433\u043e \u043f\u043e\u043d\u043e\u0448\u0435\u043d\u043d\u043e\u0435)",
+                    "price": 1.711,
+                    "stickers": [],
+                    "__typename": "ItemType"
+                },
+                {
+                    "color": "D2D2D2",
+                    "id": null,
+                    "currency": "USD",
+                    "stattrak": false,
+                    "slot": "",
+                    "popularity": 280,
+                    "features": null,
+                    "rarity": "\u0410\u0440\u043c\u0435\u0439\u0441\u043a\u043e\u0435 \u043a\u0430\u0447\u0435\u0441\u0442\u0432\u043e",
+                    "my_item": false,
+                    "rarity_ext": {
+                        "id": "Mil-Spec Grade",
+                        "name": "\u0410\u0440\u043c\u0435\u0439\u0441\u043a\u043e\u0435 \u043a\u0430\u0447\u0435\u0441\u0442\u0432\u043e",
+                        "__typename": "RarityExtraType"
+                    },
+                    "ctp": 16,
+                    "quality": "WW",
+                    "phase": "",
+                    "descriptions": null,
+                    "type": [
+                        "\u0412\u0438\u043d\u0442\u043e\u0432\u043a\u0430",
+                        "\u0410\u0440\u043c\u0435\u0439\u0441\u043a\u043e\u0435 \u043a\u0430\u0447\u0435\u0441\u0442\u0432\u043e"
+                    ],
+                    "tags": null,
+                    "image_512": "https://cdn2.csgo.com/item/AK-47%20%7C%20Elite%20Build%20%28Well-Worn%29/512.png",
+                    "image_100": "https://cdn2.csgo.com/item/AK-47%20%7C%20Elite%20Build%20%28Well-Worn%29/100.png",
+                    "image_150": "https://cdn2.csgo.com/item/AK-47%20%7C%20Elite%20Build%20%28Well-Worn%29/150.png",
+                    "image_300": "https://cdn2.csgo.com/item/AK-47%20%7C%20Elite%20Build%20%28Well-Worn%29/300.png",
+                    "seo": {
+                        "category": "Rifle",
+                        "type": "AK-47",
+                        "__typename": "SeoType"
+                    },
+                    "market_hash_name": "AK-47 | Elite Build (Well-Worn)",
+                    "market_name": "AK-47 | \u042d\u043b\u0438\u0442\u043d\u043e\u0435 \u0441\u043d\u0430\u0440\u044f\u0436\u0435\u043d\u0438\u0435 (\u041f\u043e\u043d\u043e\u0448\u0435\u043d\u043d\u043e\u0435)",
+                    "price": 0.845,
+                    "stickers": [],
+                    "__typename": "ItemType"
+                },
+                {
+                    "color": "CF6A32",
+                    "id": null,
+                    "currency": "USD",
+                    "stattrak": true,
+                    "slot": "",
+                    "popularity": 80,
+                    "features": null,
+                    "rarity": "\u0410\u0440\u043c\u0435\u0439\u0441\u043a\u043e\u0435 \u043a\u0430\u0447\u0435\u0441\u0442\u0432\u043e",
+                    "my_item": false,
+                    "rarity_ext": {
+                        "id": "Mil-Spec Grade",
+                        "name": "\u0410\u0440\u043c\u0435\u0439\u0441\u043a\u043e\u0435 \u043a\u0430\u0447\u0435\u0441\u0442\u0432\u043e",
+                        "__typename": "RarityExtraType"
+                    },
+                    "ctp": 30,
+                    "quality": "FT",
+                    "phase": "",
+                    "descriptions": null,
+                    "type": [
+                        "\u0412\u0438\u043d\u0442\u043e\u0432\u043a\u0430",
+                        "StatTrak\u2122",
+                        "\u0410\u0440\u043c\u0435\u0439\u0441\u043a\u043e\u0435 \u043a\u0430\u0447\u0435\u0441\u0442\u0432\u043e"
+                    ],
+                    "tags": null,
+                    "image_512": "https://cdn2.csgo.com/item/StatTrak%E2%84%A2%20AK-47%20%7C%20Elite%20Build%20%28Field-Tested%29/512.png",
+                    "image_100": "https://cdn2.csgo.com/item/StatTrak%E2%84%A2%20AK-47%20%7C%20Elite%20Build%20%28Field-Tested%29/100.png",
+                    "image_150": "https://cdn2.csgo.com/item/StatTrak%E2%84%A2%20AK-47%20%7C%20Elite%20Build%20%28Field-Tested%29/150.png",
+                    "image_300": "https://cdn2.csgo.com/item/StatTrak%E2%84%A2%20AK-47%20%7C%20Elite%20Build%20%28Field-Tested%29/300.png",
+                    "seo": {
+                        "category": "Rifle",
+                        "type": "AK-47",
+                        "__typename": "SeoType"
+                    },
+                    "market_hash_name": "StatTrak\u2122 AK-47 | Elite Build (Field-Tested)",
+                    "market_name": "StatTrak\u2122 AK-47 | \u042d\u043b\u0438\u0442\u043d\u043e\u0435 \u0441\u043d\u0430\u0440\u044f\u0436\u0435\u043d\u0438\u0435 (\u041f\u043e\u0441\u043b\u0435 \u043f\u043e\u043b\u0435\u0432\u044b\u0445 \u0438\u0441\u043f\u044b\u0442\u0430\u043d\u0438\u0439)",
+                    "price": 3.364,
+                    "stickers": [],
+                    "__typename": "ItemType"
+                },
+                {
+                    "color": "CF6A32",
+                    "id": null,
+                    "currency": "USD",
+                    "stattrak": true,
+                    "slot": "",
+                    "popularity": 151,
+                    "features": null,
+                    "rarity": "\u0410\u0440\u043c\u0435\u0439\u0441\u043a\u043e\u0435 \u043a\u0430\u0447\u0435\u0441\u0442\u0432\u043e",
+                    "my_item": false,
+                    "rarity_ext": {
+                        "id": "Mil-Spec Grade",
+                        "name": "\u0410\u0440\u043c\u0435\u0439\u0441\u043a\u043e\u0435 \u043a\u0430\u0447\u0435\u0441\u0442\u0432\u043e",
+                        "__typename": "RarityExtraType"
+                    },
+                    "ctp": 26,
+                    "quality": "WW",
+                    "phase": "",
+                    "descriptions": null,
+                    "type": [
+                        "\u0412\u0438\u043d\u0442\u043e\u0432\u043a\u0430",
+                        "StatTrak\u2122",
+                        "\u0410\u0440\u043c\u0435\u0439\u0441\u043a\u043e\u0435 \u043a\u0430\u0447\u0435\u0441\u0442\u0432\u043e"
+                    ],
+                    "tags": null,
+                    "image_512": "https://cdn2.csgo.com/item/StatTrak%E2%84%A2%20AK-47%20%7C%20Elite%20Build%20%28Well-Worn%29/512.png",
+                    "image_100": "https://cdn2.csgo.com/item/StatTrak%E2%84%A2%20AK-47%20%7C%20Elite%20Build%20%28Well-Worn%29/100.png",
+                    "image_150": "https://cdn2.csgo.com/item/StatTrak%E2%84%A2%20AK-47%20%7C%20Elite%20Build%20%28Well-Worn%29/150.png",
+                    "image_300": "https://cdn2.csgo.com/item/StatTrak%E2%84%A2%20AK-47%20%7C%20Elite%20Build%20%28Well-Worn%29/300.png",
+                    "seo": {
+                        "category": "Rifle",
+                        "type": "AK-47",
+                        "__typename": "SeoType"
+                    },
+                    "market_hash_name": "StatTrak\u2122 AK-47 | Elite Build (Well-Worn)",
+                    "market_name": "StatTrak\u2122 AK-47 | \u042d\u043b\u0438\u0442\u043d\u043e\u0435 \u0441\u043d\u0430\u0440\u044f\u0436\u0435\u043d\u0438\u0435 (\u041f\u043e\u043d\u043e\u0448\u0435\u043d\u043d\u043e\u0435)",
+                    "price": 2.45,
+                    "stickers": [],
+                    "__typename": "ItemType"
+                },
+                {
+                    "color": "CF6A32",
+                    "id": null,
+                    "currency": "USD",
+                    "stattrak": true,
+                    "slot": "",
+                    "popularity": 77,
+                    "features": null,
+                    "rarity": "\u0410\u0440\u043c\u0435\u0439\u0441\u043a\u043e\u0435 \u043a\u0430\u0447\u0435\u0441\u0442\u0432\u043e",
+                    "my_item": false,
+                    "rarity_ext": {
+                        "id": "Mil-Spec Grade",
+                        "name": "\u0410\u0440\u043c\u0435\u0439\u0441\u043a\u043e\u0435 \u043a\u0430\u0447\u0435\u0441\u0442\u0432\u043e",
+                        "__typename": "RarityExtraType"
+                    },
+                    "ctp": 24,
+                    "quality": "BS",
+                    "phase": "",
+                    "descriptions": null,
+                    "type": [
+                        "\u041f\u0438\u0441\u0442\u043e\u043b\u0435\u0442-\u043f\u0443\u043b\u0435\u043c\u0451\u0442",
+                        "StatTrak\u2122",
+                        "\u0410\u0440\u043c\u0435\u0439\u0441\u043a\u043e\u0435 \u043a\u0430\u0447\u0435\u0441\u0442\u0432\u043e"
+                    ],
+                    "tags": null,
+                    "image_512": "https://cdn2.csgo.com/item/StatTrak%E2%84%A2%20P90%20%7C%20Elite%20Build%20%28Battle-Scarred%29/512.png",
+                    "image_100": "https://cdn2.csgo.com/item/StatTrak%E2%84%A2%20P90%20%7C%20Elite%20Build%20%28Battle-Scarred%29/100.png",
+                    "image_150": "https://cdn2.csgo.com/item/StatTrak%E2%84%A2%20P90%20%7C%20Elite%20Build%20%28Battle-Scarred%29/150.png",
+                    "image_300": "https://cdn2.csgo.com/item/StatTrak%E2%84%A2%20P90%20%7C%20Elite%20Build%20%28Battle-Scarred%29/300.png",
+                    "seo": {
+                        "category": "SMG",
+                        "type": "P90",
+                        "__typename": "SeoType"
+                    },
+                    "market_hash_name": "StatTrak\u2122 P90 | Elite Build (Battle-Scarred)",
+                    "market_name": "StatTrak\u2122 P90 | \u042d\u043b\u0438\u0442\u043d\u043e\u0435 \u0441\u043d\u0430\u0440\u044f\u0436\u0435\u043d\u0438\u0435 (\u0417\u0430\u043a\u0430\u043b\u0451\u043d\u043d\u043e\u0435 \u0432 \u0431\u043e\u044f\u0445)",
+                    "price": 0.174,
+                    "stickers": [],
+                    "__typename": "ItemType"
+                },
+                {
+                    "color": "CF6A32",
+                    "id": null,
+                    "currency": "USD",
+                    "stattrak": true,
+                    "slot": "",
+                    "popularity": 15,
+                    "features": null,
+                    "rarity": "\u0410\u0440\u043c\u0435\u0439\u0441\u043a\u043e\u0435 \u043a\u0430\u0447\u0435\u0441\u0442\u0432\u043e",
+                    "my_item": false,
+                    "rarity_ext": {
+                        "id": "Mil-Spec Grade",
+                        "name": "\u0410\u0440\u043c\u0435\u0439\u0441\u043a\u043e\u0435 \u043a\u0430\u0447\u0435\u0441\u0442\u0432\u043e",
+                        "__typename": "RarityExtraType"
+                    },
+                    "ctp": 21,
+                    "quality": "FT",
+                    "phase": "",
+                    "descriptions": null,
+                    "type": [
+                        "\u041f\u0438\u0441\u0442\u043e\u043b\u0435\u0442-\u043f\u0443\u043b\u0435\u043c\u0451\u0442",
+                        "StatTrak\u2122",
+                        "\u0410\u0440\u043c\u0435\u0439\u0441\u043a\u043e\u0435 \u043a\u0430\u0447\u0435\u0441\u0442\u0432\u043e"
+                    ],
+                    "tags": null,
+                    "image_512": "https://cdn2.csgo.com/item/StatTrak%E2%84%A2%20P90%20%7C%20Elite%20Build%20%28Field-Tested%29/512.png",
+                    "image_100": "https://cdn2.csgo.com/item/StatTrak%E2%84%A2%20P90%20%7C%20Elite%20Build%20%28Field-Tested%29/100.png",
+                    "image_150": "https://cdn2.csgo.com/item/StatTrak%E2%84%A2%20P90%20%7C%20Elite%20Build%20%28Field-Tested%29/150.png",
+                    "image_300": "https://cdn2.csgo.com/item/StatTrak%E2%84%A2%20P90%20%7C%20Elite%20Build%20%28Field-Tested%29/300.png",
+                    "seo": {
+                        "category": "SMG",
+                        "type": "P90",
+                        "__typename": "SeoType"
+                    },
+                    "market_hash_name": "StatTrak\u2122 P90 | Elite Build (Field-Tested)",
+                    "market_name": "StatTrak\u2122 P90 | \u042d\u043b\u0438\u0442\u043d\u043e\u0435 \u0441\u043d\u0430\u0440\u044f\u0436\u0435\u043d\u0438\u0435 (\u041f\u043e\u0441\u043b\u0435 \u043f\u043e\u043b\u0435\u0432\u044b\u0445 \u0438\u0441\u043f\u044b\u0442\u0430\u043d\u0438\u0439)",
+                    "price": 0.25,
+                    "stickers": [],
+                    "__typename": "ItemType"
+                },
+                {
+                    "color": "CF6A32",
+                    "id": null,
+                    "currency": "USD",
+                    "stattrak": true,
+                    "slot": "",
+                    "popularity": 29,
+                    "features": null,
+                    "rarity": "\u0410\u0440\u043c\u0435\u0439\u0441\u043a\u043e\u0435 \u043a\u0430\u0447\u0435\u0441\u0442\u0432\u043e",
+                    "my_item": false,
+                    "rarity_ext": {
+                        "id": "Mil-Spec Grade",
+                        "name": "\u0410\u0440\u043c\u0435\u0439\u0441\u043a\u043e\u0435 \u043a\u0430\u0447\u0435\u0441\u0442\u0432\u043e",
+                        "__typename": "RarityExtraType"
+                    },
+                    "ctp": 18,
+                    "quality": "MW",
+                    "phase": "",
+                    "descriptions": null,
+                    "type": [
+                        "\u041f\u0438\u0441\u0442\u043e\u043b\u0435\u0442-\u043f\u0443\u043b\u0435\u043c\u0451\u0442",
+                        "StatTrak\u2122",
+                        "\u0410\u0440\u043c\u0435\u0439\u0441\u043a\u043e\u0435 \u043a\u0430\u0447\u0435\u0441\u0442\u0432\u043e"
+                    ],
+                    "tags": null,
+                    "image_512": "https://cdn2.csgo.com/item/StatTrak%E2%84%A2%20P90%20%7C%20Elite%20Build%20%28Minimal%20Wear%29/512.png",
+                    "image_100": "https://cdn2.csgo.com/item/StatTrak%E2%84%A2%20P90%20%7C%20Elite%20Build%20%28Minimal%20Wear%29/100.png",
+                    "image_150": "https://cdn2.csgo.com/item/StatTrak%E2%84%A2%20P90%20%7C%20Elite%20Build%20%28Minimal%20Wear%29/150.png",
+                    "image_300": "https://cdn2.csgo.com/item/StatTrak%E2%84%A2%20P90%20%7C%20Elite%20Build%20%28Minimal%20Wear%29/300.png",
+                    "seo": {
+                        "category": "SMG",
+                        "type": "P90",
+                        "__typename": "SeoType"
+                    },
+                    "market_hash_name": "StatTrak\u2122 P90 | Elite Build (Minimal Wear)",
+                    "market_name": "StatTrak\u2122 P90 | \u042d\u043b\u0438\u0442\u043d\u043e\u0435 \u0441\u043d\u0430\u0440\u044f\u0436\u0435\u043d\u0438\u0435 (\u041d\u0435\u043c\u043d\u043e\u0433\u043e \u043f\u043e\u043d\u043e\u0448\u0435\u043d\u043d\u043e\u0435)",
+                    "price": 0.618,
+                    "stickers": [],
+                    "__typename": "ItemType"
+                },
+                {
+                    "color": "CF6A32",
+                    "id": null,
+                    "currency": "USD",
+                    "stattrak": true,
+                    "slot": "",
+                    "popularity": 51,
+                    "features": null,
+                    "rarity": "\u0410\u0440\u043c\u0435\u0439\u0441\u043a\u043e\u0435 \u043a\u0430\u0447\u0435\u0441\u0442\u0432\u043e",
+                    "my_item": false,
+                    "rarity_ext": {
+                        "id": "Mil-Spec Grade",
+                        "name": "\u0410\u0440\u043c\u0435\u0439\u0441\u043a\u043e\u0435 \u043a\u0430\u0447\u0435\u0441\u0442\u0432\u043e",
+                        "__typename": "RarityExtraType"
+                    },
+                    "ctp": 30,
+                    "quality": "WW",
+                    "phase": "",
+                    "descriptions": null,
+                    "type": [
+                        "\u041f\u0438\u0441\u0442\u043e\u043b\u0435\u0442-\u043f\u0443\u043b\u0435\u043c\u0451\u0442",
+                        "StatTrak\u2122",
+                        "\u0410\u0440\u043c\u0435\u0439\u0441\u043a\u043e\u0435 \u043a\u0430\u0447\u0435\u0441\u0442\u0432\u043e"
+                    ],
+                    "tags": null,
+                    "image_512": "https://cdn2.csgo.com/item/StatTrak%E2%84%A2%20P90%20%7C%20Elite%20Build%20%28Well-Worn%29/512.png",
+                    "image_100": "https://cdn2.csgo.com/item/StatTrak%E2%84%A2%20P90%20%7C%20Elite%20Build%20%28Well-Worn%29/100.png",
+                    "image_150": "https://cdn2.csgo.com/item/StatTrak%E2%84%A2%20P90%20%7C%20Elite%20Build%20%28Well-Worn%29/150.png",
+                    "image_300": "https://cdn2.csgo.com/item/StatTrak%E2%84%A2%20P90%20%7C%20Elite%20Build%20%28Well-Worn%29/300.png",
+                    "seo": {
+                        "category": "SMG",
+                        "type": "P90",
+                        "__typename": "SeoType"
+                    },
+                    "market_hash_name": "StatTrak\u2122 P90 | Elite Build (Well-Worn)",
+                    "market_name": "StatTrak\u2122 P90 | \u042d\u043b\u0438\u0442\u043d\u043e\u0435 \u0441\u043d\u0430\u0440\u044f\u0436\u0435\u043d\u0438\u0435 (\u041f\u043e\u043d\u043e\u0448\u0435\u043d\u043d\u043e\u0435)",
+                    "price": 0.159,
+                    "stickers": [],
+                    "__typename": "ItemType"
+                },
+                {
+                    "color": "CF6A32",
+                    "id": null,
+                    "currency": "USD",
+                    "stattrak": true,
+                    "slot": "",
+                    "popularity": 95,
+                    "features": null,
+                    "rarity": "\u0410\u0440\u043c\u0435\u0439\u0441\u043a\u043e\u0435 \u043a\u0430\u0447\u0435\u0441\u0442\u0432\u043e",
+                    "my_item": false,
+                    "rarity_ext": {
+                        "id": "Mil-Spec Grade",
+                        "name": "\u0410\u0440\u043c\u0435\u0439\u0441\u043a\u043e\u0435 \u043a\u0430\u0447\u0435\u0441\u0442\u0432\u043e",
+                        "__typename": "RarityExtraType"
+                    },
+                    "ctp": 26,
+                    "quality": "BS",
+                    "phase": "",
+                    "descriptions": null,
+                    "type": [
+                        "\u0412\u0438\u043d\u0442\u043e\u0432\u043a\u0430",
+                        "StatTrak\u2122",
+                        "\u0410\u0440\u043c\u0435\u0439\u0441\u043a\u043e\u0435 \u043a\u0430\u0447\u0435\u0441\u0442\u0432\u043e"
+                    ],
+                    "tags": null,
+                    "image_512": "https://cdn2.csgo.com/item/StatTrak%E2%84%A2%20AK-47%20%7C%20Elite%20Build%20%28Battle-Scarred%29/512.png",
+                    "image_100": "https://cdn2.csgo.com/item/StatTrak%E2%84%A2%20AK-47%20%7C%20Elite%20Build%20%28Battle-Scarred%29/100.png",
+                    "image_150": "https://cdn2.csgo.com/item/StatTrak%E2%84%A2%20AK-47%20%7C%20Elite%20Build%20%28Battle-Scarred%29/150.png",
+                    "image_300": "https://cdn2.csgo.com/item/StatTrak%E2%84%A2%20AK-47%20%7C%20Elite%20Build%20%28Battle-Scarred%29/300.png",
+                    "seo": {
+                        "category": "Rifle",
+                        "type": "AK-47",
+                        "__typename": "SeoType"
+                    },
+                    "market_hash_name": "StatTrak\u2122 AK-47 | Elite Build (Battle-Scarred)",
+                    "market_name": "StatTrak\u2122 AK-47 | \u042d\u043b\u0438\u0442\u043d\u043e\u0435 \u0441\u043d\u0430\u0440\u044f\u0436\u0435\u043d\u0438\u0435 (\u0417\u0430\u043a\u0430\u043b\u0451\u043d\u043d\u043e\u0435 \u0432 \u0431\u043e\u044f\u0445)",
+                    "price": 2.481,
+                    "stickers": [],
+                    "__typename": "ItemType"
+                }
+            ],
+            "__typename": "ItemsType"
+        }
+    }
+}
