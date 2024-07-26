@@ -11,7 +11,7 @@ class CSMarketParse:
         self.__parse_url: str = "https://market.csgo.com/api/graphql"
         self.session: Session = Session()
     
-    async def search_item(self, item_name: str) -> None:
+    async def save_data(self, item_name: str) -> None:
         """
         Получение всех item's
         :item_name:
@@ -185,7 +185,7 @@ class CSMarketParse:
         :item_name:
         """
 
-        is_saved: bool = await self.search_item(item_name=item_name)
+        is_saved: bool = await self.save_data(item_name=item_name)
 
         if is_saved: 
             
