@@ -3,7 +3,7 @@ from typing import Union, List
 import json
 
 
-class CSMoneyService:
+class CSMoneyParse:
 
     def __init__(self) -> None:
         self.__url = "https://cs.money/1.0/market/sell-orders"

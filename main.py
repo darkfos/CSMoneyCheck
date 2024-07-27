@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from src.api.routers.market_router import market_router
+from src.api.routers import api_v1_router
 import uvicorn
 
 app: FastAPI = FastAPI(
@@ -7,7 +7,7 @@ app: FastAPI = FastAPI(
 )
 
 app.include_router(
-    market_router
+    api_v1_router
 )
 
 

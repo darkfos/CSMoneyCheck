@@ -1,6 +1,7 @@
 from src.api.dto.cs_market_dto import MarketItemsData
 from src.cs_services.cs_market_parse import CSMarketParse
 from src.api.exceptions.market_exception import MarketException
+from src.api.exceptions.enum_for_excp import ServiceErrors
 
 
 class MarketService:
@@ -18,4 +19,4 @@ class MarketService:
                 count=item_data.get("count"),
                 items=[itm for itm in item_data.get("items")]
             )
-        await MarketException.not_found_a_items()
+        await MarketException.not_found_a_items(txt_for_detail=ServiceErrors.cs_market.value)
