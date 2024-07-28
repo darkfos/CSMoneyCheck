@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Главная страница</title>
+        <link rel="stylesheet" href="{{ url_for('static', path='/main_page.css') }}">
+    </head>
+    <body>
+        <header class="header_site">
+            <nav>
+                <a class="logo">
+                    <img src="{{ url_for('static', path='/images/logo.png')}}">
+                </a>
+                <a href="">Главная</a>
+                <a href="">Проверка инвентаря</a>
+            </nav>
+        </header>        
+    </body>
+</html>
