@@ -13,6 +13,8 @@ class CSMoneyService:
             item_name=item_name
         )
 
+        print(items_data)
+
         if items_data:
             return MoneyItemsData(
                 count=items_data["count"],

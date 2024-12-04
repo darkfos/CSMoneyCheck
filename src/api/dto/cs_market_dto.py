@@ -1,5 +1,5 @@
 from pydantic import BaseModel
-from typing import List, Dict, Union
+from typing import List, Dict, Union, Any
 
 
 class MarketItemsData(BaseModel):
@@ -12,6 +12,6 @@ class MarketItemsData(BaseModel):
                 int,
                 float,
             ],
-            Union[str, int, list, float, dict],
+            Union[Any],
         ]
     ]
