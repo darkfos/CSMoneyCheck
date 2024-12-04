@@ -12,10 +12,8 @@ market_router: APIRouter = APIRouter(
     path="/get_items",
     status_code=status.HTTP_200_OK,
     description="Получение информации о предметах",
-    response_model=MarketItemsData
-    )
-async def get_items_data_market(
-    item: str
-):
+    response_model=MarketItemsData,
+)
+async def get_items_data_market(item: str):
     data = await MarketService().get_items_data(item_name=item)
     return data

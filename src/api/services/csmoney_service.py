@@ -8,18 +8,17 @@ from typing import Union
 class CSMoneyService:
 
     async def get_items_data(self, item_name: str) -> MoneyItemsData:
-        
-        items_data: Union[bool, dict] = CSMoneyParse().get_all_data_by_itemname(item_name=item_name)
+
+        items_data: Union[bool, dict] = CSMoneyParse().get_all_data_by_itemname(  # noqa
+            item_name=item_name
+        )
 
         if items_data:
             return MoneyItemsData(
                 count=items_data["count"],
-                items=[
-                    item
-                    for item in items_data.get("items")
-                ]
+                items=[item for item in items_data.get("items")],
             )
-        
+
         await MarketException.not_found_a_items(
             txt_for_detail=ServiceErrors.cs_money.value
         )

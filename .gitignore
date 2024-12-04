@@ -3,3 +3,5 @@ vnv
 ./vnv
 __pycache__
 ./__pycache__
+.idea/
+.idea

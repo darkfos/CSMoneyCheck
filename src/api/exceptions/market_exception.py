@@ -7,6 +7,5 @@ class MarketException:
     @staticmethod
     async def not_found_a_items(txt_for_detail: ServiceErrors):
         raise HTTPException(
-            status_code=status.HTTP_404_NOT_FOUND,
-            detail=txt_for_detail
+            status_code=status.HTTP_404_NOT_FOUND, detail=txt_for_detail
         )
