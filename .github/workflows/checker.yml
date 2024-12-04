@@ -1,0 +1,22 @@
+name: CSMoney Pipeline
+
+on:
+  push:
+    branches: ["main", "dev"]
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  run-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install github lib
+        uses: actions/checkout@v4
+      - name: Install python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.12"
+      - name: Install dep for python
+        run: pip3 install flake8
+      - name: Run linter flake8
+        run: flake8 .
