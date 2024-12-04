@@ -1,7 +1,7 @@
-from src.api.dto.cs_market_dto import MarketItemsData
-from src.cs_services.cs_market_parse import CSMarketParse
-from src.api.exceptions.market_exception import MarketException
-from src.api.exceptions.enum_for_excp import ServiceErrors
+from src.api.dto import MarketItemsData
+from src.cs_services import CSMarketParse
+from src.api.exceptions import MarketException
+from src.api.exceptions import ServiceErrors
 
 
 class MarketService:
@@ -12,11 +12,15 @@ class MarketService:
         :item_name:
         """
 
-        item_data: dict = await CSMarketParse().get_all_data_by_itemname(item_name=item_name)
+        item_data: dict = await CSMarketParse().get_all_data_by_itemname(
+            item_name=item_name
+        )
         if item_data.get("items") != []:
             print(item_data["items"])
             return MarketItemsData(
                 count=item_data.get("count"),
-                items=[itm for itm in item_data.get("items")]
+                items=[itm for itm in item_data.get("items")],
             )
-        await MarketException.not_found_a_items(txt_for_detail=ServiceErrors.cs_market.value)
+        await MarketException.not_found_a_items(
+            txt_for_detail=ServiceErrors.cs_market.value
+        )

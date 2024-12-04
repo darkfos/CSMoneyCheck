@@ -2,7 +2,6 @@ from requests import Session
 from typing import Union
 import asyncio
 import json
-from bs4 import BeautifulSoup as bs_engine
 
 
 class CSMarketParse:
@@ -10,7 +9,7 @@ class CSMarketParse:
     def __init__(self) -> None:
         self.__parse_url: str = "https://market.csgo.com/api/graphql"
         self.session: Session = Session()
-    
+
     async def save_data(self, item_name: str) -> None:
         """
         Получение всех item's
@@ -18,26 +17,14 @@ class CSMarketParse:
         """
 
         query_data: dict = {
-        "operationName": "items",
-        "variables": {
-            "filters": [
-                {
-                    "id": "search",
-                    "items": [
-                        {
-                            "id": item_name
-                        }
-                    ]
-                }
-            ],
-            "order": {
-                "id": "default",
-                "direction": "desc"
-            },
-            "offset": 0,
-            "count": 498
-        },
-        "query": """query items($count: Int, $filters: [FilterInputType], $page: Int, $offset: Int, $order: OrderInputType!) {
+            "operationName": "items",
+            "variables": {
+                "filters": [{"id": "search", "items": [{"id": item_name}]}],
+                "order": {"id": "default", "direction": "desc"},
+                "offset": 0,
+                "count": 498,
+            },  # noqa
+            "query": """query items($count: Int, $filters: [FilterInputType], $page: Int, $offset: Int, $order: OrderInputType!) {
         items(
             count: $count
             filters: $filters
@@ -158,28 +145,36 @@ class CSMarketParse:
             }
             __typename
         }
-        }"""
-}       
-        url_to_referer: str = self.session.get(url=f"https://market.csgo.com/ru/?search={item_name}").url.split("=")[-1]
+        }""",  # noqa
+        }  # noqa
+        url_to_referer: str = self.session.get(
+            url=f"https://market.csgo.com/ru/?search={item_name}"
+        ).url.split("=")[-1]
         req = self.session.post(
             self.__parse_url,
             headers={
                 "Accept": "application/json, text/plain, */*",
                 "App-Settings": "lang=ru",
                 "Content-Type": "application/json",
-                "Referer": f"https://market.csgo.com/ru/?search={url_to_referer}",
-                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 YaBrowser/24.6.0.0 Safari/537.36"
-                },
-            data=json.dumps(query_data)
+                "Referer": f"https://market.csgo.com/ru/?search={url_to_referer}",  # noqa
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 YaBrowser/24.6.0.0 Safari/537.36",  # noqa
+            },
+            data=json.dumps(query_data),
         )
 
         if req.status_code == 200:
-            with open("src/cs_services/js_data_items/csmarket.json", "w", encoding="UTF-8") as file:
+            with open(
+                "src/cs_services/js_data_items/csmarket.json",
+                "w",
+                encoding="UTF-8",  # noqa
+            ) as file:
                 json.dump(req.json(), file, indent=4)
             return True
         return False
-    
-    async def get_all_data_by_itemname(self, item_name: str) -> Union[dict[str, Union[str, int]], bool]:
+
+    async def get_all_data_by_itemname(
+        self, item_name: str
+    ) -> Union[dict[str, Union[str, int]], bool]:
         """
         Поиск предметов по названию
         :item_name:
@@ -187,14 +182,18 @@ class CSMarketParse:
 
         is_saved: bool = await self.save_data(item_name=item_name)
 
-        if is_saved: 
-            
-            #Open file
-            with open("src/cs_services/js_data_items/csmarket.json", "r") as file:
+        if is_saved:
+
+            # Open file
+            with open(
+                "src/cs_services/js_data_items/csmarket.json", "r"
+            ) as file:  # noqa
                 file_data: dict = json.load(file)
 
                 data_to_response: dict = {
-                    "count": file_data["data"]["items"]["paginatorInfo"]["count"],
+                    "count": file_data["data"]["items"]["paginatorInfo"][
+                        "count"
+                    ],  # noqa
                     "items": [
                         {
                             "currency": item["currency"],
@@ -203,14 +202,16 @@ class CSMarketParse:
                             "market_hash_name": item["market_hash_name"],
                             "quality": item["quality"],
                             "stickers": item["stickers"],
-                            "price": item["price"]
+                            "price": item["price"],
                         }
                         for item in file_data["data"]["items"]["data"]
-                    ]
+                    ],
                 }
 
                 return data_to_response
-        else: return False
+        else:
+            return False
+
 
 cs_money_parse_object: CSMarketParse = CSMarketParse()
 asyncio.run(cs_money_parse_object.get_all_data_by_itemname("sdsd"))

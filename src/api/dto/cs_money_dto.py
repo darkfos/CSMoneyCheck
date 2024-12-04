@@ -1,4 +1,5 @@
-from src.api.dto.cs_market_dto import MarketItemsData
+from src.api.dto import MarketItemsData
+
 
 class MoneyItemsData(MarketItemsData):
     pass
