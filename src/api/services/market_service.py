@@ -1,7 +1,7 @@
-from src.api.dto.cs_market_dto import MarketItemsData
-from src.cs_services.cs_market_parse import CSMarketParse
-from src.api.exceptions.market_exception import MarketException
-from src.api.exceptions.enum_for_excp import ServiceErrors
+from src.api.dto import MarketItemsData
+from src.cs_services import CSMarketParse
+from src.api.exceptions import MarketException
+from src.api.exceptions import ServiceErrors
 
 
 class MarketService:

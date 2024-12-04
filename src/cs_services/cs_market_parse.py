@@ -164,7 +164,9 @@ class CSMarketParse:
 
         if req.status_code == 200:
             with open(
-                "src/cs_services/js_data_items/csmarket.json", "w", encoding="UTF-8" # noqa
+                "src/cs_services/js_data_items/csmarket.json",
+                "w",
+                encoding="UTF-8",  # noqa
             ) as file:
                 json.dump(req.json(), file, indent=4)
             return True

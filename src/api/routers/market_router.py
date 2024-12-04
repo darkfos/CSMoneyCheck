@@ -1,5 +1,5 @@
 from fastapi import APIRouter, status, Depends
-from src.api.services.market_service import MarketService, MarketItemsData
+from src.api.services import MarketService, MarketItemsData
 from typing import Annotated
 from logging import Logger
 from src.configs import user_config, logger_dep
@@ -18,8 +18,7 @@ market_router: APIRouter = APIRouter(
     response_model=MarketItemsData,
 )
 async def get_items_data_market(
-    logger: Annotated[Logger, Depends(logger_dep)],
-    item: str
+    logger: Annotated[Logger, Depends(logger_dep)], item: str
 ):
     """
     Получение информации о всех предметах по названию из Market
@@ -28,6 +27,6 @@ async def get_items_data_market(
     :return:
     """
 
-    logger.info(msg="MARKET: Получение предмета=%s"%item, extra=user_config)
+    logger.info(msg="MARKET: Получение предмета=%s" % item, extra=user_config)
     data = await MarketService().get_items_data(item_name=item)
     return data

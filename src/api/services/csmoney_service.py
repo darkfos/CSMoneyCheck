@@ -1,7 +1,7 @@
-from src.api.dto.cs_money_dto import MoneyItemsData
-from src.api.exceptions.enum_for_excp import ServiceErrors
-from src.cs_services.cs_money_parse import CSMoneyParse
-from src.api.exceptions.market_exception import MarketException
+from src.api.dto import MoneyItemsData
+from src.api.exceptions import ServiceErrors
+from src.cs_services import CSMoneyParse
+from src.api.exceptions import MarketException
 from typing import Union
 
 
