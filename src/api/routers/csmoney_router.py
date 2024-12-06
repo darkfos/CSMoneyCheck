@@ -26,5 +26,7 @@ async def get_items_data_cs_money(
     :return:
     """
 
-    logger.info(msg="CSMONEY: Получение предмета = %s" % item_name, extra=user_config) # noqa
+    logger.info(
+        msg="CSMONEY: Получение предмета = %s" % item_name, extra=user_config
+    )  # noqa
     return await CSMoneyService().get_items_data(item_name=item_name)
