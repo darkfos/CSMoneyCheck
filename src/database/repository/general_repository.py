@@ -5,13 +5,13 @@ from asyncpg import Pool
 
 class GeneralRepository:
     def __init__(
-            self,
-            model: LiteralString[
-                ModelsEnum.USER.value,
-                ModelsEnum.USER_TYPE.value,
-                ModelsEnum.FAVOURITE.value
-            ],
-            pool: Pool
+        self,
+        model: LiteralString[
+            ModelsEnum.USER.value,
+            ModelsEnum.USER_TYPE.value,
+            ModelsEnum.FAVOURITE.value,
+        ],
+        pool: Pool,
     ) -> None:
         self.model = model
         self.session = pool
@@ -25,9 +25,10 @@ class GeneralRepository:
 
         async with self.session.acquire() as local_session:
             try:
-                stmt = await local_session.execute(f"""
-                INSERT INTO {self.model.name} {self.model.get_columns()} VALUES {self.model.get_values()}
-                """, *data)
+                stmt = await local_session.execute(
+                    f"INSERT INTO {self.model.name} {self.model.get_columns()} VALUES {self.model.get_values()}", # noqa
+                    *data,
+                )  # noqa
                 if stmt:
                     return True
                 raise Exception

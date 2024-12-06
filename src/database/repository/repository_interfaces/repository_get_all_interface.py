@@ -11,5 +11,5 @@ class GetAllInterface(ABC):
         :param id_model:
         :return:
         """
-        
+
         raise NotImplementedError
