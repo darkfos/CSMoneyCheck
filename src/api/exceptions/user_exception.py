@@ -9,3 +9,9 @@ class UserException:
         raise HTTPException(
             status_code=status.HTTP_409_CONFLICT, detail="No register new user"
         )
+
+    @classmethod
+    async def no_acceptable_password(cls) -> None:
+        raise HTTPException(
+            status_code=status.HTTP_406_NOT_ACCEPTABLE, detail="No acceptable password" # noqa
+        )

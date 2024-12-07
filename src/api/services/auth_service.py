@@ -1,5 +1,7 @@
 import datetime
-from src.api.dto.auth_dto import AuthUserData
+
+from src.api.auth.auth_service import AuthService
+from src.api.dto.auth_dto import AuthUserData, AuthModel
 from src.api.hash.hash_service import HashService
 from src.api.dep import InterfaceUnitOfWork
 from src.enums_cs import UserTypeEnum
@@ -27,5 +29,29 @@ class UserService:
 
             if req:
                 return
-            print(req)
             await UserException.no_register_user()
+
+    @classmethod
+    async def login_user(
+        cls, uow: InterfaceUnitOfWork, user_data: AuthUserData
+    ) -> AuthModel:
+        async with uow:
+            user_info = await uow.user_repository.find_by_email(email=user_data.email) # noqa
+            if user_info:
+                verify_user = await HashService.verify_password(
+                    password=user_data.password,
+                    hashed_password=user_info[0].get("hashed_password"),
+                )
+
+                if verify_user:
+                    # Create token
+                    token = AuthService.auth_security.create_access_token( # noqa
+                        uid=str(user_info[0].get("id"))
+                    )  # noqa
+                    refresh_token = AuthService.auth_security.create_refresh_token( # noqa
+                        uid=str(user_info[0].get("id"))
+                    )  # noqa
+                    return AuthModel(
+                        access_token=token, refresh_token=refresh_token
+                    )  # noqa
+                await UserException.no_acceptable_password()

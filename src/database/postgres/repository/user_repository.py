@@ -69,6 +69,19 @@ class UserRepository(
 
         async with self.session.acquire() as ls:
             req = await ls.execute(
-                f"DELETE FROM {self.model.name} WHERE id = ?", *(id_model,)
+                f"DELETE FROM {self.model.name} WHERE id = $1", *(id_model,)
             )  # noqa
+            return req
+
+    async def find_by_email(self, email: str) -> Record:
+        """
+        Method reposifory for find user by email
+        :param email:
+        :return:
+        """
+
+        async with self.session.acquire() as ls:
+            req = await ls.fetch(
+                f"SELECT * FROM {self.model.name} WHERE email = $1", email
+            )
             return req
