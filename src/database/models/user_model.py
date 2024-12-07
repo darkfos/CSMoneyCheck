@@ -15,7 +15,9 @@ class Users(ModelInterface):
         id_user_type: int = None,
     ) -> None:
         self.__name: Final[str] = ModelsEnum.USER.value
-        self.__id_user_type: int = id_user_type if id_user_type else UserTypeEnum.USER.value
+        self.__id_user_type: int = (
+            id_user_type if id_user_type else UserTypeEnum.USER.value
+        )
         self.__email = email
         self.__hashed_password = hashed_password
         self.__username = username
@@ -35,7 +37,13 @@ class Users(ModelInterface):
         """
 
     async def columns(self) -> tuple[str]:
-        return ("id_user_type", "email", "hashed_password", "username", "date_reg")  # noqa
+        return (
+            "id_user_type",
+            "email",
+            "hashed_password",
+            "username",
+            "date_reg",
+        )  # noqa
 
     async def values(self) -> tuple[Any]:
         return (

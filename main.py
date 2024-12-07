@@ -1,4 +1,3 @@
-import asyncio
 from src.api.application import run_app
 
 

@@ -1,4 +1,4 @@
-from src.database.models.models_interfaces.model_interface import ModelInterface
+from src.database.models.models_interfaces.model_interface import ModelInterface  # noqa
 from typing import List
 
 

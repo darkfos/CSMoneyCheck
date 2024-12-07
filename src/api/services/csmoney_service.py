@@ -9,7 +9,9 @@ class CSMoneyService:
 
     async def get_items_data(self, item_name: str) -> MoneyItemsData:
 
-        items_data: Union[bool, dict] = CSMoneyParse().get_all_data_by_itemname(  # noqa
+        items_data: Union[
+            bool, dict
+        ] = await CSMoneyParse().get_all_data_by_itemname(  # noqa
             item_name=item_name
         )
 

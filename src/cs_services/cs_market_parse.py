@@ -1,6 +1,5 @@
-from requests import Session
-from typing import Union
-import asyncio
+from aiohttp import ClientSession
+from typing import Union, Type
 import json
 
 
@@ -8,7 +7,7 @@ class CSMarketParse:
 
     def __init__(self) -> None:
         self.__parse_url: str = "https://market.csgo.com/api/graphql"
-        self.session: Session = Session()
+        self.session: Type[ClientSession] = ClientSession
 
     async def save_data(self, item_name: str) -> None:
         """
@@ -147,30 +146,33 @@ class CSMarketParse:
         }
         }""",  # noqa
         }  # noqa
-        url_to_referer: str = self.session.get(
-            url=f"https://market.csgo.com/ru/?search={item_name}"
-        ).url.split("=")[-1]
-        req = self.session.post(
-            self.__parse_url,
-            headers={
-                "Accept": "application/json, text/plain, */*",
-                "App-Settings": "lang=ru",
-                "Content-Type": "application/json",
-                "Referer": f"https://market.csgo.com/ru/?search={url_to_referer}",  # noqa
-                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 YaBrowser/24.6.0.0 Safari/537.36",  # noqa
-            },
-            data=json.dumps(query_data),
-        )
 
-        if req.status_code == 200:
-            with open(
-                "src/cs_services/js_data_items/csmarket.json",
-                "w",
-                encoding="UTF-8",  # noqa
-            ) as file:
-                json.dump(req.json(), file, indent=4)
-            return True
-        return False
+        async with self.session() as local_session:
+            req = await local_session.get(
+                url=f"https://market.csgo.com/ru/?search={item_name}"
+            )
+            url_to_referer = str(req.url).split("=")[-1]
+            req_post = await local_session.post(
+                url=self.__parse_url,
+                headers={
+                    "Accept": "application/json, text/plain, */*",
+                    "App-Settings": "lang=ru",
+                    "Content-Type": "application/json",
+                    "Referer": f"https://market.csgo.com/ru/?search={url_to_referer}",  # noqa
+                    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 YaBrowser/24.6.0.0 Safari/537.36",  # noqa
+                },
+                data=json.dumps(query_data),
+            )
+
+            if req_post.status == 200:
+                with open(
+                    "src/cs_services/js_data_items/csmarket.json",
+                    "w",
+                    encoding="UTF-8",  # noqa
+                ) as file:
+                    json.dump(await req_post.json(), file, indent=4)
+                return True
+            return False
 
     async def get_all_data_by_itemname(
         self, item_name: str
@@ -211,7 +213,3 @@ class CSMarketParse:
                 return data_to_response
         else:
             return False
-
-
-cs_money_parse_object: CSMarketParse = CSMarketParse()
-asyncio.run(cs_money_parse_object.get_all_data_by_itemname("sdsd"))
