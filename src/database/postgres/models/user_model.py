@@ -23,12 +23,13 @@ class Users(ModelInterface):
         self.__username = username
         self.__date_reg = date_reg
 
-    async def create_model_script(self) -> str:
+    @staticmethod
+    async def create_model_script() -> str:
         return """
-        CREATE TABLE users IF NOT EXISTS (
+        CREATE TABLE IF NOT EXISTS users (
         id SERIAL PRIMARY KEY,
         id_user_type INT,
-        email TEXT,
+        email TEXT UNIQUE,
         hashed_password TEXT,
         username VARCHAR(155),
         date_reg DATE,

@@ -18,3 +18,21 @@ class UserType(ModelInterface):
     @property
     def name(self) -> str:
         return self.__name
+
+    @staticmethod
+    async def create_model_script() -> str:
+        return """
+        CREATE TABLE IF NOT EXISTS usertype (
+        id SERIAL PRIMARY KEY,
+        name_type VARCHAR(60) UNIQUE
+        )
+        """
+
+    @staticmethod
+    async def create_user_types() -> str:
+        return """
+        INSERT INTO usertype (id, name_type) VALUES
+        (1, 'user'),
+        (2, 'admin')
+        ON CONFLICT (name_type) DO NOTHING;
+        """
