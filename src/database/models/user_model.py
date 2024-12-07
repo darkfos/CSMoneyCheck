@@ -8,10 +8,10 @@ class Users(ModelInterface):
 
     def __init__(
         self,
-        email: str,
-        hashed_password: str,
-        username: str,
-        date_reg: datetime.date,
+        email: str = None,
+        hashed_password: str = None,
+        username: str = None,
+        date_reg: datetime.date = None,
         id_user_type: int = None,
     ) -> None:
         self.__name: Final[str] = ModelsEnum.USER.value
@@ -53,3 +53,7 @@ class Users(ModelInterface):
             self.__username,
             self.__date_reg,
         )
+
+    @property
+    def name(self) -> str:
+        return self.__name
