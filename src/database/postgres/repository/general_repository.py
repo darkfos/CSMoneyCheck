@@ -1,7 +1,7 @@
 from src.enums_cs import ModelsEnum
 from typing import LiteralString, Union
 from asyncpg import Pool
-from src.database.models import Users, UserType
+from src.database.postgres.models import Users, UserType
 
 
 class GeneralRepository:

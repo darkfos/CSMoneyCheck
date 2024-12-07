@@ -1,4 +1,4 @@
-from src.database.models import ModelInterface
+from src.database.postgres.models import ModelInterface
 from src.enums_cs.models_enums import ModelsEnum
 from typing import Final, Any
 

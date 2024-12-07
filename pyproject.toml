@@ -52,6 +52,7 @@ autoflake8 = "^0.4.1"
 aiohttp = "^3.11.9"
 logging = "^0.4.9.6"
 asyncpg = "^0.30.0"
+redis = "^5.2.1"
 
 
 [build-system]

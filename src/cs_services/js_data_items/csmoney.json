@@ -56,61 +56,6 @@
             }
         },
         {
-            "id": 28458444,
-            "appId": 730,
-            "seller": {
-                "steamId64": "76561198346579164",
-                "botId": null,
-                "delivery": {
-                    "speed": "slow",
-                    "medianTime": 212.59,
-                    "successRate": 47.62
-                }
-            },
-            "asset": {
-                "id": 40341013168,
-                "names": {
-                    "short": "Glock-18 | Wasteland Rebel",
-                    "full": "StatTrak\u2122 Glock-18 | Wasteland Rebel (Factory New)",
-                    "identifier": 1022
-                },
-                "images": {
-                    "screenshot": "https://screenshots.cs.money/csmoney2/8418204cf7f77b1ef31ce9ae181f50a8_image.jpg",
-                    "steam": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgposbaqKAxf0Ob3djFN79eJg4GYg_L4MrXVqXlU6sB9teXI8oThxlaxqhE_ZGj6I9OccFQ3YwmE-1C5x-u61sC0tM7JwSAy6ydx4XqOnxepwUYbufdxgq4",
-                    "preview": "https://screenshots.cs.money/csmoney2/8418204cf7f77b1ef31ce9ae181f50a8_large_preview.png"
-                },
-                "isSouvenir": false,
-                "isStatTrak": true,
-                "quality": "fn",
-                "rarity": "Covert",
-                "pattern": 110,
-                "type": 5,
-                "caseName": "Gamma Case",
-                "color": 7,
-                "collection": {
-                    "name": "Gamma",
-                    "image": null
-                },
-                "float": 0.06494524329900742,
-                "inspect": "14864771322525034306",
-                "rank": null
-            },
-            "stickers": null,
-            "keychains": null,
-            "pricing": {
-                "default": 27.61,
-                "priceBeforeDiscount": 27.61,
-                "extra": null,
-                "discount": -0.1713,
-                "computed": 32.34,
-                "basePrice": 32.34,
-                "priceCoefficient": 1
-            },
-            "links": {
-                "3d": "https://3d.cs.money/item/8418204cf7f77b1ef31ce9ae181f50a8"
-            }
-        },
-        {
             "id": 10754846,
             "appId": 730,
             "seller": {
@@ -446,63 +391,6 @@
             "links": {}
         },
         {
-            "id": 12573374,
-            "appId": 730,
-            "seller": {
-                "steamId64": "76561198051638337",
-                "botId": null,
-                "delivery": {
-                    "speed": "fast",
-                    "medianTime": 3.11,
-                    "successRate": 75
-                }
-            },
-            "asset": {
-                "id": 33700366265,
-                "names": {
-                    "short": "Glock-18 | Wasteland Rebel",
-                    "full": "StatTrak\u2122 Glock-18 | Wasteland Rebel (Factory New)",
-                    "identifier": 1022
-                },
-                "images": {
-                    "screenshot": "https://screenshots.cs.money/csmoney2/f032644e264b31fa2807e0e6a03eaab8_image.jpg",
-                    "steam": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgposbaqKAxf0Ob3djFN79eJg4GYg_L4MrXVqXlU6sB9teXI8oThxgbs_0tlajihJ4PAd1c8aAvWrwXsx-q9h8fqvZTNmic2uylz5SqJlxypwUYbBM1DXmo",
-                    "preview": "https://screenshots.cs.money/csmoney2/f032644e264b31fa2807e0e6a03eaab8_large_preview.png"
-                },
-                "isSouvenir": false,
-                "isStatTrak": true,
-                "quality": "fn",
-                "rarity": "Covert",
-                "pattern": 714,
-                "type": 5,
-                "caseName": "Gamma Case",
-                "color": 7,
-                "collection": {
-                    "name": "Gamma",
-                    "image": null
-                },
-                "float": 0.01241546869277954,
-                "inspect": "16612303953248175908",
-                "rank": null
-            },
-            "stickers": null,
-            "keychains": null,
-            "pricing": {
-                "default": 46.74,
-                "priceBeforeDiscount": 46.74,
-                "extra": {
-                    "float": 24.87
-                },
-                "discount": -0.8186,
-                "computed": 85,
-                "basePrice": 85,
-                "priceCoefficient": 1
-            },
-            "links": {
-                "3d": "https://3d.cs.money/item/f032644e264b31fa2807e0e6a03eaab8"
-            }
-        },
-        {
             "id": 12573375,
             "appId": 730,
             "seller": {
@@ -557,6 +445,63 @@
             },
             "links": {
                 "3d": "https://3d.cs.money/item/c35e0fdbb23b14232622228dc5aeb2b4"
+            }
+        },
+        {
+            "id": 12573374,
+            "appId": 730,
+            "seller": {
+                "steamId64": "76561198051638337",
+                "botId": null,
+                "delivery": {
+                    "speed": "fast",
+                    "medianTime": 3.11,
+                    "successRate": 75
+                }
+            },
+            "asset": {
+                "id": 33700366265,
+                "names": {
+                    "short": "Glock-18 | Wasteland Rebel",
+                    "full": "StatTrak\u2122 Glock-18 | Wasteland Rebel (Factory New)",
+                    "identifier": 1022
+                },
+                "images": {
+                    "screenshot": "https://screenshots.cs.money/csmoney2/f032644e264b31fa2807e0e6a03eaab8_image.jpg",
+                    "steam": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgposbaqKAxf0Ob3djFN79eJg4GYg_L4MrXVqXlU6sB9teXI8oThxgbs_0tlajihJ4PAd1c8aAvWrwXsx-q9h8fqvZTNmic2uylz5SqJlxypwUYbBM1DXmo",
+                    "preview": "https://screenshots.cs.money/csmoney2/f032644e264b31fa2807e0e6a03eaab8_large_preview.png"
+                },
+                "isSouvenir": false,
+                "isStatTrak": true,
+                "quality": "fn",
+                "rarity": "Covert",
+                "pattern": 714,
+                "type": 5,
+                "caseName": "Gamma Case",
+                "color": 7,
+                "collection": {
+                    "name": "Gamma",
+                    "image": null
+                },
+                "float": 0.01241546869277954,
+                "inspect": "16612303953248175908",
+                "rank": null
+            },
+            "stickers": null,
+            "keychains": null,
+            "pricing": {
+                "default": 46.74,
+                "priceBeforeDiscount": 46.74,
+                "extra": {
+                    "float": 24.87
+                },
+                "discount": -0.8186,
+                "computed": 85,
+                "basePrice": 85,
+                "priceCoefficient": 1
+            },
+            "links": {
+                "3d": "https://3d.cs.money/item/f032644e264b31fa2807e0e6a03eaab8"
             }
         },
         {
@@ -3102,120 +3047,6 @@
             }
         },
         {
-            "id": 29616956,
-            "appId": 730,
-            "seller": {
-                "steamId64": "76561198308709331",
-                "botId": 2269,
-                "delivery": {
-                    "speed": "instant",
-                    "medianTime": null,
-                    "successRate": null
-                }
-            },
-            "asset": {
-                "id": 40634739120,
-                "names": {
-                    "short": "Glock-18 | Blue Fissure",
-                    "full": "Glock-18 | Blue Fissure (Minimal Wear)",
-                    "identifier": 2850
-                },
-                "images": {
-                    "steam": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgposbaqKAxf2-r3ci9D_cmzmJWZksj4OrzZgiUJ7Zwmj-uQoo2l2VHj-BBoZDj7LY6SdA47NV_U-gO9xeq-0MS-78_B1zI97YdssEhj"
-                },
-                "isSouvenir": false,
-                "isStatTrak": false,
-                "quality": "mw",
-                "rarity": "Mil-Spec Grade",
-                "pattern": 210,
-                "type": 5,
-                "color": 2,
-                "collection": {
-                    "name": "Arms Deal 3",
-                    "image": null
-                },
-                "float": 0.08333417773246765,
-                "inspect": 14160027823347354000
-            },
-            "stickers": [
-                {
-                    "collection": {
-                        "name": "10 Year Birthday Sticker Capsule"
-                    },
-                    "name": "Sticker | Blue Gem (Glitter)",
-                    "image": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/csgo10/blue_gem_glitter.6d4c4e0e1da6da22cef9143997bb5a51fb12b9fa.png",
-                    "wiki": "https://wiki.cs.money/ru/stickers/sticker-blue-gem-glitter",
-                    "wear": 0,
-                    "pricing": {
-                        "default": 2.95,
-                        "rarity": 0.1
-                    }
-                },
-                {
-                    "collection": {
-                        "name": "Copenhagen 2024 Challengers Stickers"
-                    },
-                    "name": "Sticker | Cloud9 (Glitter) | Copenhagen 2024",
-                    "image": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/cph2024/c9_glitter.c9dc84361ae7820c0be976b80ff871af5e2b3564.png",
-                    "wiki": "https://wiki.cs.money/ru/stickers/sticker-cloud9-glitter-copenhagen-2024",
-                    "wear": 0,
-                    "pricing": {
-                        "default": 0.6900000000000001,
-                        "rarity": 0
-                    }
-                },
-                {
-                    "collection": {
-                        "name": "Copenhagen 2024 Challengers Stickers"
-                    },
-                    "name": "Sticker | Cloud9 (Glitter) | Copenhagen 2024",
-                    "image": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/cph2024/c9_glitter.c9dc84361ae7820c0be976b80ff871af5e2b3564.png",
-                    "wiki": "https://wiki.cs.money/ru/stickers/sticker-cloud9-glitter-copenhagen-2024",
-                    "wear": 0,
-                    "pricing": {
-                        "default": 0.6900000000000001,
-                        "rarity": 0
-                    }
-                },
-                {
-                    "collection": {
-                        "name": "Copenhagen 2024 Challengers Stickers"
-                    },
-                    "name": "Sticker | Cloud9 (Glitter) | Copenhagen 2024",
-                    "image": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/cph2024/c9_glitter.c9dc84361ae7820c0be976b80ff871af5e2b3564.png",
-                    "wiki": "https://wiki.cs.money/ru/stickers/sticker-cloud9-glitter-copenhagen-2024",
-                    "wear": 0,
-                    "pricing": {
-                        "default": 0.6900000000000001,
-                        "rarity": null
-                    }
-                }
-            ],
-            "keychains": [
-                {
-                    "name": "Charm | Lil' Cap Gun",
-                    "image": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/keychains/weapon_1/kc_wpn_tec9_cap.12803f1f8630be6546497781284cdc541c5c9046.png",
-                    "pricing": {
-                        "default": 0.25,
-                        "rarity": 0
-                    },
-                    "keychainPattern": 7454
-                }
-            ],
-            "pricing": {
-                "default": 2.21,
-                "priceBeforeDiscount": 2.31,
-                "extra": {
-                    "stickers": 0.1
-                },
-                "discount": 0.039,
-                "computed": 2.22,
-                "basePrice": 2.61,
-                "priceCoefficient": 0.85
-            },
-            "links": {}
-        },
-        {
             "id": 29192410,
             "appId": 730,
             "seller": {
@@ -5322,6 +5153,222 @@
             "links": {
                 "3d": "https://3d.cs.money/item/75bd4c2b90da79baae8aa63ca5080c9f"
             }
+        },
+        {
+            "id": 22878792,
+            "appId": 730,
+            "seller": {
+                "steamId64": "76561199480718834",
+                "botId": null,
+                "delivery": {
+                    "speed": "fast",
+                    "medianTime": 9.11,
+                    "successRate": 72.22
+                }
+            },
+            "asset": {
+                "id": 37838200167,
+                "names": {
+                    "short": "Glock-18 | Blue Fissure",
+                    "full": "Glock-18 | Blue Fissure (Minimal Wear)",
+                    "identifier": 2850
+                },
+                "images": {
+                    "screenshot": "https://screenshots.cs.money/csmoney2/57da940dcd12b74524ecff359d27a8e8_image.jpg",
+                    "steam": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgposbaqKAxf2-r3ci9D_cmzmJWZksj4OrzZgiVUuZYm2L-R8YijiQfsqkU5Z2ilIdKQc1I8aF3SqQK2xLzshsW_uM7N1zI97eN_N2VO",
+                    "preview": "https://screenshots.cs.money/csmoney2/57da940dcd12b74524ecff359d27a8e8_large_preview.png"
+                },
+                "isSouvenir": false,
+                "isStatTrak": false,
+                "quality": "mw",
+                "rarity": "Mil-Spec Grade",
+                "pattern": 831,
+                "type": 5,
+                "caseName": "CS:GO Weapon Case 3",
+                "color": 2,
+                "collection": {
+                    "name": "Arms Deal 3",
+                    "image": null
+                },
+                "float": 0.11093834042549133,
+                "inspect": "10127688055307028422",
+                "rank": null
+            },
+            "stickers": [
+                {
+                    "collection": {
+                        "name": "EMS Katowice 2014 Legends"
+                    },
+                    "name": "Sticker | Team Dignitas | Katowice 2014",
+                    "image": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/emskatowice2014/dignitas.e1d16be85014b4f04fa93f06a62a7068235fd56f.png",
+                    "wiki": "https://wiki.cs.money/ru/stickers/sticker-team-dignitas-katowice-2014",
+                    "wear": 0,
+                    "pricing": {
+                        "default": 758.56,
+                        "rarity": 14.1
+                    }
+                },
+                {
+                    "collection": {
+                        "name": "ESL One Cologne 2014 Legends"
+                    },
+                    "name": "Sticker | Ninjas in Pyjamas | Cologne 2014",
+                    "image": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/cologne2014/ninjasinpyjamas.844bf3d2594e179ba5ab43b8d64e8fe7ad2e74d3.png",
+                    "wiki": "https://wiki.cs.money/ru/stickers/sticker-ninjas-in-pyjamas-cologne-2014",
+                    "wear": 0,
+                    "pricing": {
+                        "default": 4.36,
+                        "rarity": 0.1
+                    }
+                },
+                {
+                    "collection": {
+                        "name": "EMS Katowice 2014 Legends"
+                    },
+                    "name": "Sticker | Ninjas in Pyjamas | Katowice 2014",
+                    "image": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/emskatowice2014/ninjasinpyjamas.ff9eb25199981dab81f0d6309f39b65e85e824bc.png",
+                    "wiki": "https://wiki.cs.money/ru/stickers/sticker-ninjas-in-pyjamas-katowice-2014",
+                    "wear": 0,
+                    "pricing": {
+                        "default": 377.7,
+                        "rarity": 7.5
+                    }
+                },
+                {
+                    "collection": {
+                        "name": "Katowice 2019 Player Autographs"
+                    },
+                    "name": "Sticker | s1mple | Katowice 2019",
+                    "image": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/katowice2019/sig_s1mple.59f0151d3e3ab476ed4e4f559abf18fdd334d17a.png",
+                    "wiki": "https://wiki.cs.money/ru/stickers/sticker-s1mple-katowice-2019",
+                    "wear": 73,
+                    "pricing": {
+                        "default": 2.48,
+                        "rarity": null
+                    }
+                }
+            ],
+            "keychains": null,
+            "pricing": {
+                "default": 23.91,
+                "priceBeforeDiscount": 23.91,
+                "extra": {
+                    "stickers": 21.7
+                },
+                "discount": -2.7641,
+                "computed": 90,
+                "basePrice": 90,
+                "priceCoefficient": 1
+            },
+            "links": {
+                "3d": "https://3d.cs.money/item/57da940dcd12b74524ecff359d27a8e8"
+            }
+        },
+        {
+            "id": 29213979,
+            "appId": 730,
+            "seller": {
+                "steamId64": "76561198976275638",
+                "botId": null,
+                "delivery": {
+                    "speed": "fast",
+                    "medianTime": 5.66,
+                    "successRate": 92.86
+                }
+            },
+            "asset": {
+                "id": 40523155368,
+                "names": {
+                    "short": "Glock-18 | Blue Fissure",
+                    "full": "Glock-18 | Blue Fissure (Minimal Wear)",
+                    "identifier": 2850
+                },
+                "images": {
+                    "steam": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgposbaqKAxf2-r3ci9D_cmzmJWZksj4OrzZgiVUuZYm2L-R8YijiQfsqkU5Z2ilIdKQc1I8aF3SqQK2xLzshsW_uM7N1zI97eN_N2VO"
+                },
+                "isSouvenir": false,
+                "isStatTrak": false,
+                "quality": "mw",
+                "rarity": "Mil-Spec Grade",
+                "pattern": 766,
+                "type": 5,
+                "caseName": "CS:GO Weapon Case 3",
+                "color": 2,
+                "collection": {
+                    "name": "Arms Deal 3",
+                    "image": null
+                },
+                "float": 0.10230180621147156,
+                "inspect": "3323663175459179918",
+                "rank": null
+            },
+            "stickers": [
+                {
+                    "collection": {
+                        "name": "EMS Katowice 2014 Challengers"
+                    },
+                    "name": "Sticker | ESL Wolf (Foil) | Katowice 2014",
+                    "image": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/emskatowice2014/wolf_esl_foil.49d7d28f6a286dad51fa2667ad53c70cd60198dd.png",
+                    "wiki": "https://wiki.cs.money/ru/stickers/sticker-esl-wolf-foil-katowice-2014",
+                    "wear": 0,
+                    "pricing": {
+                        "default": 607.69,
+                        "rarity": 31.5
+                    }
+                },
+                {
+                    "collection": {
+                        "name": "Stockholm 2021 Challengers Stickers"
+                    },
+                    "name": "Sticker | Movistar Riders (Holo) | Stockholm 2021",
+                    "image": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/stockh2021/ride_holo.d5d4f1c4d1f4f9717667f601c8f500dfb14bac6f.png",
+                    "wiki": "https://wiki.cs.money/ru/stickers/sticker-movistar-riders-holo-stockholm-2021",
+                    "wear": 0,
+                    "pricing": {
+                        "default": 6.38,
+                        "rarity": 0.5
+                    }
+                },
+                {
+                    "collection": {
+                        "name": "EMS Katowice 2014 Challengers"
+                    },
+                    "name": "Sticker | ESL Wolf (Foil) | Katowice 2014",
+                    "image": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/emskatowice2014/wolf_esl_foil.49d7d28f6a286dad51fa2667ad53c70cd60198dd.png",
+                    "wiki": "https://wiki.cs.money/ru/stickers/sticker-esl-wolf-foil-katowice-2014",
+                    "wear": 0,
+                    "pricing": {
+                        "default": 607.69,
+                        "rarity": 31.5
+                    }
+                },
+                {
+                    "collection": {
+                        "name": "Stockholm 2021 Challengers Stickers"
+                    },
+                    "name": "Sticker | Movistar Riders (Holo) | Stockholm 2021",
+                    "image": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/stockh2021/ride_holo.d5d4f1c4d1f4f9717667f601c8f500dfb14bac6f.png",
+                    "wiki": "https://wiki.cs.money/ru/stickers/sticker-movistar-riders-holo-stockholm-2021",
+                    "wear": 0,
+                    "pricing": {
+                        "default": 6.38,
+                        "rarity": 0.5
+                    }
+                }
+            ],
+            "keychains": null,
+            "pricing": {
+                "default": 2.22,
+                "priceBeforeDiscount": 66.22,
+                "extra": {
+                    "stickers": 64
+                },
+                "discount": -0.4497,
+                "computed": 96,
+                "basePrice": 96,
+                "priceCoefficient": 1
+            },
+            "links": {}
         }
     ]
 }

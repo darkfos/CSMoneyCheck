@@ -1,11 +1,11 @@
 from typing import List
 
-from src.database.repository import (
+from src.database.postgres.repository import (
     GetAllInterface,
     GetOneInterface,
     GeneralRepository,
 )  # noqa
-from src.database.models import Users
+from src.database.postgres.models import Users
 from asyncpg import Pool, Record
 
 

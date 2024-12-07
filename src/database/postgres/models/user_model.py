@@ -1,7 +1,7 @@
 import datetime
 from typing import Final, Any
 from src.enums_cs import ModelsEnum, UserTypeEnum
-from src.database.models import ModelInterface
+from src.database.postgres.models import ModelInterface
 
 
 class Users(ModelInterface):
