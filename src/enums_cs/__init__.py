@@ -1,5 +1,5 @@
-from src.enums_cs.models_enums import ModelsEnum
+from src.enums_cs.models_enums import ModelsEnum, UserTypeEnum
 from typing import List
 
 
-__all__: List[str] = ["ModelsEnum"]
+__all__: List[str] = ["ModelsEnum", "UserTypeEnum"]

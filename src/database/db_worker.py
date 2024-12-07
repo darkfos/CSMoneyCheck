@@ -4,9 +4,9 @@ from src.configs import DatabaseSettings
 
 
 class DBWorker:
-    def __aenter__(self):
-        self.pool: Pool = asyncpg.create_pool(DatabaseSettings.DB_URL)
-        yield self
+    async def __aenter__(self):
+        self.pool: Pool = await asyncpg.create_pool(DatabaseSettings.DB_URL)
+        return self
 
-    def __aexit__(self, exc_type, exc_val, exc_tb):
-        self.pool.close()
+    async def __aexit__(self, exc_type, exc_val, exc_tb):
+        await self.pool.close()
