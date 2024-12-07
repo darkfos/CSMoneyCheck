@@ -4,6 +4,8 @@ from logging import Logger
 from src.api.services import CSMoneyService
 from src.api.dto import MoneyItemsData
 from src.configs import user_config, logger_dep
+from src.api import redis
+from src.database import RedisWorker
 
 
 cs_money_router: APIRouter = APIRouter(prefix="/cs_money", tags=["CSMoney"])
@@ -16,7 +18,9 @@ cs_money_router: APIRouter = APIRouter(prefix="/cs_money", tags=["CSMoney"])
     status_code=status.HTTP_200_OK,
 )
 async def get_items_data_cs_money(
-    logger: Annotated[Logger, Depends(logger_dep)], item_name: str
+    logger: Annotated[Logger, Depends(logger_dep)],
+    redis_db: Annotated[RedisWorker, Depends(redis)],
+    item_name: str,
 ) -> MoneyItemsData:
     """
     Получение полной информации о предметах по названию из сервиса
@@ -26,5 +30,15 @@ async def get_items_data_cs_money(
     :return:
     """
 
-    logger.info(msg="CSMONEY: Получение предмета = %s" % item_name, extra=user_config) # noqa
-    return await CSMoneyService().get_items_data(item_name=item_name)
+    logger.info(
+        msg="CSMONEY: Получение предмета = %s" % item_name, extra=user_config
+    )  # noqa
+
+    redis_search_data = await redis_db.get_value(key=item_name)
+
+    if redis_search_data:
+        return redis_search_data
+    else:
+        result = await CSMoneyService().get_items_data(item_name=item_name)
+        await redis_db.set_key(key=item_name, value=result.json())
+        return result

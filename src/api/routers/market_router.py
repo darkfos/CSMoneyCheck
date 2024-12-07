@@ -3,6 +3,7 @@ from src.api.services import MarketService, MarketItemsData
 from typing import Annotated
 from logging import Logger
 from src.configs import user_config, logger_dep
+from src.api import redis, RedisWorker
 
 
 market_router: APIRouter = APIRouter(
@@ -18,7 +19,9 @@ market_router: APIRouter = APIRouter(
     response_model=MarketItemsData,
 )
 async def get_items_data_market(
-    logger: Annotated[Logger, Depends(logger_dep)], item: str
+    logger: Annotated[Logger, Depends(logger_dep)],
+    redis_db: Annotated[RedisWorker, Depends(redis)],
+    item: str,
 ):
     """
     Получение информации о всех предметах по названию из Market
@@ -28,5 +31,11 @@ async def get_items_data_market(
     """
 
     logger.info(msg="MARKET: Получение предмета=%s" % item, extra=user_config)
-    data = await MarketService().get_items_data(item_name=item)
-    return data
+
+    redis_data = await redis_db.get_value(key=item)
+    if redis_data:
+        return redis_data
+    else:
+        data = await MarketService().get_items_data(item_name=item)
+        await redis_db.set_key(key=item, value=data.json())
+        return data
