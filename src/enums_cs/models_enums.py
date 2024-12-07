@@ -3,7 +3,7 @@ from typing import Final
 
 
 class ModelsEnum(Enum):
-    USER: Final[str] = "user"
+    USER: Final[str] = "users"
     USER_TYPE: Final[str] = "usertype"
     FAVOURITE: Final[str] = "favourite"
 

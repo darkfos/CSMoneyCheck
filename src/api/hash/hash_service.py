@@ -11,7 +11,7 @@ class HashService:
         return hashed_password
 
     @classmethod
-    async def verify_password(cls, password: str, hashed_password: bytes) -> bool:
+    async def verify_password(cls, password: str, hashed_password: bytes) -> bool: # noqa
         return bcrypt.checkpw(
             password=password.encode("utf-8"), hashed_password=hashed_password
         )

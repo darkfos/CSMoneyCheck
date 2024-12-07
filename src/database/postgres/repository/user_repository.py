@@ -8,7 +8,8 @@ from src.database.postgres.repository import (
     UpdateInterface,
     DeleteInterface,
 )
-from asyncpg import Pool, Record
+from asyncpg import Record
+from asyncpg import Pool
 
 
 class UserRepository(
@@ -18,10 +19,10 @@ class UserRepository(
     UpdateInterface,
     DeleteInterface,
 ):
-    def __init__(self, pool: Pool):
+    def __init__(self, session: Pool):
         self.model = Users()
-        self.pool = pool
-        super().__init__(model=self.model, pool=self.pool)
+        self.session = session
+        super().__init__(model=self.model, session=self.session)
 
     async def update_data(self, id_model: int, data_to_update) -> bool:
         """
@@ -40,8 +41,8 @@ class UserRepository(
         :return:
         """
 
-        async with self.pool.acquire() as session:
-            req = session.fetchall(
+        async with self.session.acquire() as ls:
+            req = ls.fetch(
                 f"SELECT * FROM {self.model.name} WHERE id = ?", *(id_model,)
             )
             return req
@@ -53,8 +54,8 @@ class UserRepository(
         :return:
         """
 
-        async with self.pool.acquire() as session:
-            req = session.fetchone(
+        async with self.session.acquire() as ls:
+            req = await ls.fetchrow(
                 f"SELECT * FROM {self.model.name} WHERE id = ?", *(id_model,)
             )
             return req
@@ -66,8 +67,8 @@ class UserRepository(
         :return:
         """
 
-        async with self.pool.acquire() as session:
-            req = session.execute(
+        async with self.session.acquire() as ls:
+            req = await ls.execute(
                 f"DELETE FROM {self.model.name} WHERE id = ?", *(id_model,)
             )  # noqa
             return req

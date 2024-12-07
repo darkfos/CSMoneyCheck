@@ -4,4 +4,9 @@ from src.configs.auth_settings import AuthSettings
 from typing import List
 
 
-__all__: List[str] = ["user_config", "logger_dep", "DatabaseSettings", "AuthSettings"] # noqa
+__all__: List[str] = [
+    "user_config",
+    "logger_dep",
+    "DatabaseSettings",
+    "AuthSettings",
+]  # noqa

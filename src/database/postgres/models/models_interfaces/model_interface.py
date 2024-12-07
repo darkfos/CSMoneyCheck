@@ -16,3 +16,8 @@ class ModelInterface(ABC):
     @abstractmethod
     async def create_model_script() -> str:
         raise NotImplementedError
+
+    @staticmethod
+    @abstractmethod
+    async def values_for_create() -> str:
+        raise NotImplementedError

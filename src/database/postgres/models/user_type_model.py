@@ -36,3 +36,7 @@ class UserType(ModelInterface):
         (2, 'admin')
         ON CONFLICT (name_type) DO NOTHING;
         """
+
+    @staticmethod
+    async def values_for_create() -> str:
+        return "(?, ?)"

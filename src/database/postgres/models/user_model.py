@@ -30,12 +30,16 @@ class Users(ModelInterface):
         id SERIAL PRIMARY KEY,
         id_user_type INT,
         email TEXT UNIQUE,
-        hashed_password TEXT,
+        hashed_password BYTEA,
         username VARCHAR(155),
         date_reg DATE,
         FOREIGN KEY (id_user_type) REFERENCES usertype (id)
         )
         """
+
+    @staticmethod
+    async def values_for_create() -> str:
+        return "($1, $2, $3, $4, $5)"
 
     async def columns(self) -> tuple[str]:
         return (

@@ -8,14 +8,14 @@ from contextlib import asynccontextmanager
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    async with DBWorker() as connect:
-        await connect.pool.execute(
+    db = DBWorker()
+    await db.create_connection()
+    async with db.pool.acquire() as connect:
+        await connect.execute(
             await UserType.create_model_script()
         )  # Create usertype table
-        await connect.pool.execute(await UserType.create_user_types())
-        await connect.pool.execute(
-            await Users.create_model_script()
-        )  # Create user table
+        await connect.execute(await UserType.create_user_types())
+        await connect.execute(await Users.create_model_script())  # noqa
     yield
 
 
