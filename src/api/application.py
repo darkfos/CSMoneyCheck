@@ -2,7 +2,7 @@ import uvicorn
 from fastapi import FastAPI
 from src.api.routers import api_v1_router
 from src.database import DBWorker
-from src.database.postgres.models import Users, UserType  # noqa
+from src.database.postgres.models import Users, UserType, Reviews, News  # noqa
 from contextlib import asynccontextmanager
 
 
@@ -16,6 +16,8 @@ async def lifespan(app: FastAPI):
         )  # Create usertype table
         await connect.execute(await UserType.create_user_types())
         await connect.execute(await Users.create_model_script())  # noqa
+        await connect.execute(await Reviews.create_model_script())  # noqa
+        await connect.execute(await News.create_model_script())  # noqa
     yield
 
 
