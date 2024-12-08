@@ -13,5 +13,6 @@ class UserException:
     @classmethod
     async def no_acceptable_password(cls) -> None:
         raise HTTPException(
-            status_code=status.HTTP_406_NOT_ACCEPTABLE, detail="No acceptable password" # noqa
+            status_code=status.HTTP_406_NOT_ACCEPTABLE,
+            detail="No acceptable password",  # noqa
         )

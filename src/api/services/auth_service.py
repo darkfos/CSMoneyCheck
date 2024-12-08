@@ -1,9 +1,9 @@
 import datetime
-
 from src.api.auth.auth_service import AuthService
 from src.api.dto.auth_dto import AuthUserData, AuthModel
 from src.api.hash.hash_service import HashService
 from src.api.dep import InterfaceUnitOfWork
+from src.configs import AuthSettings
 from src.enums_cs import UserTypeEnum
 from src.api.exceptions import UserException
 
@@ -36,7 +36,9 @@ class UserService:
         cls, uow: InterfaceUnitOfWork, user_data: AuthUserData
     ) -> AuthModel:
         async with uow:
-            user_info = await uow.user_repository.find_by_email(email=user_data.email) # noqa
+            user_info = await uow.user_repository.find_by_email(
+                email=user_data.email
+            )  # noqa
             if user_info:
                 verify_user = await HashService.verify_password(
                     password=user_data.password,
@@ -45,11 +47,19 @@ class UserService:
 
                 if verify_user:
                     # Create token
-                    token = AuthService.auth_security.create_access_token( # noqa
-                        uid=str(user_info[0].get("id"))
+                    token = AuthService.auth_security.create_access_token(  # noqa
+                        uid=str(user_info[0].get("id")),
+                        timedelta=datetime.timedelta(
+                            minutes=AuthSettings.JWT_SECRET_LIVE
+                        ),
                     )  # noqa
-                    refresh_token = AuthService.auth_security.create_refresh_token( # noqa
-                        uid=str(user_info[0].get("id"))
+                    refresh_token = (
+                        AuthService.auth_security.create_refresh_token(  # noqa
+                            uid=str(user_info[0].get("id")),
+                            timedelta=datetime.timedelta(
+                                days=AuthSettings.JWT_REFRESH_LIVE
+                            ),
+                        )
                     )  # noqa
                     return AuthModel(
                         access_token=token, refresh_token=refresh_token

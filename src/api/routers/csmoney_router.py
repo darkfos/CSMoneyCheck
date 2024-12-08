@@ -6,6 +6,7 @@ from src.api.dto import MoneyItemsData
 from src.configs import user_config, logger_dep
 from src.api import redis
 from src.database import RedisWorker
+from src.api.auth.auth_service import AuthService
 
 
 cs_money_router: APIRouter = APIRouter(prefix="/cs_money", tags=["CSMoney"])
@@ -20,6 +21,7 @@ cs_money_router: APIRouter = APIRouter(prefix="/cs_money", tags=["CSMoney"])
 async def get_items_data_cs_money(
     logger: Annotated[Logger, Depends(logger_dep)],
     redis_db: Annotated[RedisWorker, Depends(redis)],
+    auth: Annotated[str, Depends(AuthService.auth_security.access_token_required)], # noqa
     item_name: str,
 ) -> MoneyItemsData:
     """
