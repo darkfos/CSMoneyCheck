@@ -1,13 +1,13 @@
 from src.enums_cs import ModelsEnum
 from typing import LiteralString, Union
 from asyncpg import Pool
-from src.database.postgres.models import Users, UserType
+from src.database.postgres.models import Users, UserType, News, Reviews  # noqa
 
 
 class GeneralRepository:
     def __init__(
         self,
-        model: Union[Users, UserType],
+        model: Union[Users, UserType, News, Reviews],  # noqa
         session: Pool,
     ) -> None:
         self.model = model
