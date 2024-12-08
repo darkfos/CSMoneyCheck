@@ -7,9 +7,13 @@ from src.configs import user_config, logger_dep
 from src.api import redis
 from src.database import RedisWorker
 from src.api.auth.auth_service import AuthService
+from src.enums_cs import APIRouterTagsEnum, APIRouterPrefixEnum  # noqa
 
 
-cs_money_router: APIRouter = APIRouter(prefix="/cs_money", tags=["CSMoney"])
+cs_money_router: APIRouter = APIRouter(
+    prefix=APIRouterPrefixEnum.CSMONEY_PREFIX.value,
+    tags=APIRouterTagsEnum.CSMONEY_TAGS.value,
+)  # noqa
 
 
 @cs_money_router.get(

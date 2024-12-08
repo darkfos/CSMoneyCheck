@@ -5,10 +5,14 @@ from src.api.dto import FavouriteData
 from src.api.auth.auth_service import AuthService
 from src.configs.logger_config import logger_dep
 from src.api.services.favourite_service import FavouriteService  # noqa
+from src.enums_cs import APIRouterTagsEnum, APIRouterPrefixEnum  # noqa
 from logging import Logger
 
 
-fav_router: APIRouter = APIRouter(prefix="/favourite", tags=["Favourites"])
+fav_router: APIRouter = APIRouter(
+    prefix=APIRouterPrefixEnum.FAVOURITE_PREFIX.value,
+    tags=APIRouterTagsEnum.FAVOURITE_TAGS.value,
+)
 
 
 @fav_router.post(
@@ -26,6 +30,9 @@ async def create_favourite(
     response: Response,
     fav_data: FavouriteData,
 ) -> None:
+
+    logger.info(msg=f"FAVOURITE: User add item: {fav_data.items}")
+
     return await FavouriteService.create_row_in_fav_collection(
         data=fav_data, token_data=user_data
     )

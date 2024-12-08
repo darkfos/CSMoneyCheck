@@ -9,8 +9,13 @@ from src.api.dto.auth_dto import AuthUserData
 from src.api.dep import InterfaceUnitOfWork, UnitOfWork
 from src.api.services import UserService
 from src.configs.logger_config import logger_dep
+from src.enums_cs import APIRouterTagsEnum, APIRouterPrefixEnum
 
-auth_router: APIRouter = APIRouter(prefix="/auth", tags=["Auth"])
+
+auth_router: APIRouter = APIRouter(
+    prefix=APIRouterPrefixEnum.AUTH_PREFIX.value,
+    tags=APIRouterTagsEnum.AUTH_TAGS.value,  # noqa
+)  # noqa
 
 
 @auth_router.post(

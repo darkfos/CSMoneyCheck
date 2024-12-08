@@ -1,4 +1,6 @@
-from src.database.mongo.favourites_collection import FavouritesCollection
+from src.database.mongo.collections.favourites_collection import (
+    FavouritesCollection,
+)  # noqa
 from src.api.dto import CreateFavourite, FavouriteData
 from src.api.exceptions import FavouriteException
 
