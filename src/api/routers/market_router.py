@@ -1,4 +1,4 @@
-from fastapi import APIRouter, status, Depends
+from fastapi import APIRouter, status, Depends, Response
 
 from src.api.auth.auth_service import AuthService
 from src.api.services import MarketService, MarketItemsData
@@ -23,7 +23,8 @@ market_router: APIRouter = APIRouter(
 async def get_items_data_market(
     logger: Annotated[Logger, Depends(logger_dep)],
     redis_db: Annotated[RedisWorker, Depends(redis)],
-    auth: Annotated[str, Depends(AuthService.auth_security.access_token_required)], # noqa
+    auth: Annotated[str, Depends(AuthService.verify_user)], # noqa
+    response: Response,
     item: str,
 ):
     """

@@ -57,10 +57,10 @@ async def login_user(
         user_data=user_data, uow=uow
     )  # npqa
     response.set_cookie(
-        key=AuthService.config.JWT_ACCESS_COOKIE_NAME,
+        key="access_token",
         value=token_data.access_token,  # noqa
     )
     response.set_cookie(
-        AuthService.config.JWT_REFRESH_COOKIE_NAME,
+        key="refresh_token",
         value=token_data.refresh_token,  # noqa
     )

@@ -47,20 +47,14 @@ class UserService:
 
                 if verify_user:
                     # Create token
-                    token = AuthService.auth_security.create_access_token(  # noqa
-                        uid=str(user_info[0].get("id")),
-                        timedelta=datetime.timedelta(
-                            minutes=AuthSettings.JWT_SECRET_LIVE
-                        ),
+                    token = await AuthService.create_token(  # noqa
+                        data={"sub": str(user_info[0].get("id"))},
+                        type_token="access"
                     )  # noqa
-                    refresh_token = (
-                        AuthService.auth_security.create_refresh_token(  # noqa
-                            uid=str(user_info[0].get("id")),
-                            timedelta=datetime.timedelta(
-                                days=AuthSettings.JWT_REFRESH_LIVE
-                            ),
-                        )
-                    )  # noqa
+                    refresh_token = await AuthService.create_token(
+                            data={"sub": str(user_info[0].get("id"))},
+                            type_token="refresh"
+                        ) # noqa
                     return AuthModel(
                         access_token=token, refresh_token=refresh_token
                     )  # noqa

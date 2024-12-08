@@ -16,7 +16,6 @@ class MarketService:
             item_name=item_name
         )
         if item_data.get("items") != []:
-            print(item_data["items"])
             return MarketItemsData(
                 count=item_data.get("count"),
                 items=[itm for itm in item_data.get("items")],
