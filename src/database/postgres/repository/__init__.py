@@ -14,6 +14,10 @@ from src.database.postgres.repository.repository_interfaces.repository_get_one_i
 from src.database.postgres.repository.general_repository import (
     GeneralRepository,
 )  # noqa
+from src.database.postgres.repository.user_repository import UserRepository  # noqa
+from src.database.postgres.repository.user_type_repository import (
+    UserTypeRepository,
+)  # noqa
 
 
 __all__: List[str] = [
@@ -22,4 +26,6 @@ __all__: List[str] = [
     "GetOneInterface",
     "GetAllInterface",
     "GeneralRepository",
+    "UserTypeRepository",
+    "UserRepository",
 ]

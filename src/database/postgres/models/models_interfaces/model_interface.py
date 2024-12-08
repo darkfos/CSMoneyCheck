@@ -12,6 +12,12 @@ class ModelInterface(ABC):
     async def values(self) -> tuple[Any]:
         raise NotImplementedError
 
+    @staticmethod
     @abstractmethod
-    async def create_model_script(self) -> str:
+    async def create_model_script() -> str:
+        raise NotImplementedError
+
+    @staticmethod
+    @abstractmethod
+    async def values_for_create() -> str:
         raise NotImplementedError

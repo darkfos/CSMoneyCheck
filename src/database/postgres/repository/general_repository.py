@@ -8,7 +8,7 @@ class GeneralRepository:
     def __init__(
         self,
         model: Union[Users, UserType],
-        pool: Pool,
+        session: Pool,
     ) -> None:
         self.model = model
         self.model_name: LiteralString[
@@ -16,7 +16,7 @@ class GeneralRepository:
             ModelsEnum.USER_TYPE.value,
             ModelsEnum.FAVOURITE.value,
         ] = self.model.name
-        self.session = pool
+        self.session = session
 
     async def add_data(self, data: tuple) -> bool:
         """
@@ -25,10 +25,10 @@ class GeneralRepository:
         :return:
         """
 
-        async with self.session.acquire() as local_session:
+        async with self.session.acquire() as ls:
             try:
-                stmt = await local_session.execute(
-                    f"INSERT INTO {self.model.name} {self.model.get_columns()} VALUES {self.model.get_values()}",  # noqa
+                stmt = await ls.execute(
+                    f"INSERT INTO {self.model.name} ({", ".join(await self.model.columns())}) VALUES {await self.model.values_for_create()}",  # noqa
                     *data,
                 )  # noqa
                 if stmt:
