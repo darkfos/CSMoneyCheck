@@ -3,6 +3,7 @@ from fastapi import FastAPI
 from src.api.routers import api_v1_router
 from src.database import DBWorker
 from src.database.postgres.models import Users, UserType, Reviews, News  # noqa
+from fastapi.middleware.cors import CORSMiddleware
 from contextlib import asynccontextmanager
 
 
@@ -22,6 +23,13 @@ async def lifespan(app: FastAPI):
 
 
 app: FastAPI = FastAPI(title="API CSMoney", lifespan=lifespan)
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:3000", "http://localhost:8000"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 app.include_router(api_v1_router)
 
 
