@@ -3,7 +3,6 @@ from src.api.auth.auth_service import AuthService
 from src.api.dto.auth_dto import AuthUserData, AuthModel
 from src.api.hash.hash_service import HashService
 from src.api.dep import InterfaceUnitOfWork
-from src.configs import AuthSettings
 from src.enums_cs import UserTypeEnum
 from src.api.exceptions import UserException
 
@@ -49,12 +48,12 @@ class UserService:
                     # Create token
                     token = await AuthService.create_token(  # noqa
                         data={"sub": str(user_info[0].get("id"))},
-                        type_token="access"
+                        type_token="access",  # noqa
                     )  # noqa
                     refresh_token = await AuthService.create_token(
-                            data={"sub": str(user_info[0].get("id"))},
-                            type_token="refresh"
-                        ) # noqa
+                        data={"sub": str(user_info[0].get("id"))},
+                        type_token="refresh",  # noqa
+                    )  # noqa
                     return AuthModel(
                         access_token=token, refresh_token=refresh_token
                     )  # noqa

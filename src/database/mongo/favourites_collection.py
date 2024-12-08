@@ -1,6 +1,9 @@
 from src.database.mongo.mongodb_worker import MongoDBWorker
 from src.database.mongo.mongo_interfaces import (
-    CreateInterface, GetOneInterface, GetAllInterface, DeleteInterface # noqa
+    CreateInterface,
+    GetOneInterface,
+    GetAllInterface,
+    DeleteInterface,  # noqa
 )
 from src.api.dto import CreateFavourite
 
@@ -10,7 +13,7 @@ class FavouritesCollection(
     CreateInterface,
     GetOneInterface,
     GetAllInterface,
-    DeleteInterface
+    DeleteInterface,  # noqa
 ):
 
     def __init__(self):
@@ -18,10 +21,9 @@ class FavouritesCollection(
         self.fav_collection = self.db.get_collection("favourites")
 
     async def create(self, data: CreateFavourite) -> bool:
-        req = await self.fav_collection.insert_one(
-            document=data
-        )
-        if req: return True
+        req = await self.fav_collection.insert_one(document=data)
+        if req:
+            return True
         return False
 
     async def get_all(self):

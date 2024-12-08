@@ -23,7 +23,7 @@ market_router: APIRouter = APIRouter(
 async def get_items_data_market(
     logger: Annotated[Logger, Depends(logger_dep)],
     redis_db: Annotated[RedisWorker, Depends(redis)],
-    auth: Annotated[str, Depends(AuthService.verify_user)], # noqa
+    auth: Annotated[str, Depends(AuthService.verify_user)],  # noqa
     response: Response,
     item: str,
 ):

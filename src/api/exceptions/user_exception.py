@@ -21,12 +21,12 @@ class UserException:
     async def no_auth_user(cls) -> None:
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
-            detail="User not unauthorized"
+            detail="User not unauthorized",  # noqa
         )
 
     @classmethod
     async def no_right_refresh_token(cls) -> None:
         raise HTTPException(
             status_code=status.HTTP_406_NOT_ACCEPTABLE,
-            detail="No right refresh token"
+            detail="No right refresh token",  # noqa
         )

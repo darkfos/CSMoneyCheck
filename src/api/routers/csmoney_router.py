@@ -21,7 +21,7 @@ cs_money_router: APIRouter = APIRouter(prefix="/cs_money", tags=["CSMoney"])
 async def get_items_data_cs_money(
     logger: Annotated[Logger, Depends(logger_dep)],
     redis_db: Annotated[RedisWorker, Depends(redis)],
-    auth: Annotated[str, Depends(AuthService.verify_user)], # noqa
+    auth: Annotated[str, Depends(AuthService.verify_user)],  # noqa
     response: Response,
     item_name: str,
 ) -> MoneyItemsData:

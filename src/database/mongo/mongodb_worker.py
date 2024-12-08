@@ -6,10 +6,6 @@ class MongoDBWorker:
     def __init__(self):
         self.engine_client: AsyncIOMotorClient = AsyncIOMotorClient(
             DatabaseSettings.MONGODB,
-            **{
-                "zlibCompressionLevel": 7,
-                "compressors": "zlib"
-            }
+            **{"zlibCompressionLevel": 7, "compressors": "zlib"}
         )
         self.db = self.engine_client.get_database("csmoney")
-        

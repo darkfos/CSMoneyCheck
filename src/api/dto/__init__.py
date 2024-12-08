@@ -6,7 +6,9 @@ from src.api.dto.favourite_dto import CreateFavourite, FavouriteData
 
 
 __all__: List[str] = [
-    "MoneyItemsData", "MarketItemsData",
-    "AuthModel", "CreateFavourite",
-    "FavouriteData"
+    "MoneyItemsData",
+    "MarketItemsData",
+    "AuthModel",
+    "CreateFavourite",
+    "FavouriteData",
 ]

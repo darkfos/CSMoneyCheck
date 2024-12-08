@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 
 
-class CreateInterface:
+class CreateInterface(ABC):
 
     @abstractmethod
     async def create(self, data):
