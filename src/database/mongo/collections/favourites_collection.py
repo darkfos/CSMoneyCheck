@@ -6,6 +6,7 @@ from src.database.mongo.mongo_interfaces import (
     DeleteInterface,  # noqa
 )
 from src.api.dto import CreateFavourite
+from bson.objectid import ObjectId
 
 
 class FavouritesCollection(
@@ -26,11 +27,13 @@ class FavouritesCollection(
             return True
         return False
 
-    async def get_all(self):
-        return await self.fav_collection.find()
+    async def get_all(self, id_user):
+        req = self.fav_collection.find({"id_user": int(id_user)})
+        return await req.to_list(length=None)
 
     async def get_one(self, id_user: int):
-        return await self.fav_collection.find_one(filter={"id_user": id_user})
+        return await self.fav_collection.find_one({"id_user": id_user})
 
     async def delete(self, id_fav: str):
-        await self.fav_collection.delete_one(filter={"_id": id_fav})
+        req = await self.fav_collection.delete_one({"_id": ObjectId(id_fav)})
+        return req
