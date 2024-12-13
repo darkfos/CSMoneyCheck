@@ -10,8 +10,8 @@ from asyncpg import Pool, Record
 
 
 class ReviewsRepository(GeneralRepository, GetOneInterface, GetAllInterface):  # noqa
-    def __init__(self, pool: Pool) -> None:
-        self.pool = pool
+    def __init__(self, session: Pool) -> None:
+        self.pool = session
         self.model = Reviews()
         super().__init__(model=self.model, session=self.pool)
 

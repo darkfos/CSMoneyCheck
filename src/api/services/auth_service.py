@@ -5,6 +5,7 @@ from src.api.hash.hash_service import HashService
 from src.api.dep import InterfaceUnitOfWork
 from src.enums_cs import UserTypeEnum
 from src.api.exceptions import UserException
+from src.other import EmailWorker
 
 
 class UserService:
@@ -22,10 +23,10 @@ class UserService:
                 user_data.email,
                 hashed_password,
                 "",
+                "",
                 datetime.date.today(),
             )
             req = await uow.user_repository.add_data(data=data_to_add)
-
             if req:
                 return
             await UserException.no_register_user()
@@ -57,4 +58,15 @@ class UserService:
                     return AuthModel(
                         access_token=token, refresh_token=refresh_token
                     )  # noqa
-                await UserException.no_acceptable_password()
+            await UserException.no_acceptable_password()
+
+    @classmethod
+    async def update_password_send_email(cls, token_data: dict, new_password: str) -> None:
+        """
+        Send email message for confirm update
+        :param token_data:
+        :param new_password:
+        :return:
+        """
+
+        pass

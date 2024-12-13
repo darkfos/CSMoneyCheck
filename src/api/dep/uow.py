@@ -1,5 +1,5 @@
 from src.api.dep import InterfaceUnitOfWork
-from src.database.postgres.repository import UserRepository, UserTypeRepository  # noqa
+from src.database.postgres.repository import UserRepository, UserTypeRepository, ReviewsRepository  # noqa
 from src.database.postgres.db_worker import DBWorker
 
 
@@ -13,6 +13,9 @@ class UnitOfWork(InterfaceUnitOfWork):
         self.user_type_repository: UserTypeRepository = UserTypeRepository(
             session=self.db.pool
         )  # noqa
+        self.review_repository: ReviewsRepository = ReviewsRepository(
+            session=self.db.pool
+        ) # noqa
 
         return self
 

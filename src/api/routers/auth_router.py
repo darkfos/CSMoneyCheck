@@ -4,6 +4,7 @@ from typing import Annotated
 from fastapi import APIRouter, Depends, status
 from fastapi.responses import Response  # noqa
 from src.api.auth.auth_service import AuthService  # noqa
+from src.api.services.auth_service import AuthService as AuthServices
 from src.api.dto import AuthModel
 from src.api.dto.auth_dto import AuthUserData
 from src.api.dep import InterfaceUnitOfWork, UnitOfWork
@@ -39,7 +40,7 @@ async def register_user(
     """
 
     logger.info(msg=f"Auth: Регистрация пользователя email={user_data.email}")  # noqa
-    return await UserService.create_new_user(user_data=user_data, uow=uow)
+    await UserService.create_new_user(user_data=user_data, uow=uow)
 
 
 @auth_router.post(
@@ -69,3 +70,29 @@ async def login_user(
         key="refresh_token",
         value=token_data.refresh_token,  # noqa
     )
+
+
+@auth_router.patch(
+    path="/update_password",
+    description="""
+    Update user password
+    """,
+    summary="Update password - send email message",
+    response_model=None,
+    status_code=status.HTTP_200_OK
+)
+async def update_user_password_email(
+        logger: Annotated[Logger, Depends(logger_dep)],
+        user_data: Annotated[dict, Depends(AuthService.verify_user)],
+        new_password: str
+) -> None:
+    """
+    Update user password
+    :param logger:
+    :param user_data:
+    :param new_password:
+    :return:
+    """
+
+    logger.info(msg=f"AUTH: Update user password id={user_data.get("sub")}")
+    return await AuthServices.update_password_send_email(token_data=user_data, new_password=new_password) # noqa
