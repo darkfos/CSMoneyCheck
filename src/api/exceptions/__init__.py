@@ -11,5 +11,5 @@ __all__: List[str] = [
     "ServiceErrors",
     "UserException",
     "FavouriteException",
-    "ReviewExcp"
+    "ReviewExcp",
 ]  # noqa

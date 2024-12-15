@@ -34,5 +34,5 @@ class GeneralRepository:
                 if stmt:
                     return True
                 raise Exception
-            except Exception as ex:
+            except Exception:
                 return False

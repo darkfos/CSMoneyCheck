@@ -12,5 +12,5 @@ __all__: List[str] = [
     "AuthModel",
     "CreateFavourite",
     "FavouriteData",
-    "CreateReview"
+    "CreateReview",
 ]

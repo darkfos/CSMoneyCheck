@@ -10,5 +10,5 @@ __all__: List[str] = [
     "MarketService",
     "MarketItemsData",
     "UserService",
-    "ReviewService"
+    "ReviewService",
 ]

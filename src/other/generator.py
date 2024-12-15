@@ -8,10 +8,10 @@ async def generate_random_key():
     numbers = "123456789"
     symbols = "/.,]"
 
-    all_elements: list[str] = (lower_case+upper_case+numbers+symbols).split()
+    all_elements: str = lower_case + upper_case + numbers + symbols  # noqa
     result_key: str = ""
 
-    for _ in range(0, randint(5, randint(10, 15))):
-        result_key += all_elements[randint(0, len(all_elements)-1)]
+    for _ in range(0, randint(5, randint(15, 40))):
+        result_key += all_elements[randint(0, len(all_elements) - 1)]
 
     return result_key

@@ -19,6 +19,7 @@ async def lifespan(app: FastAPI):
         await connect.execute(await Users.create_model_script())  # noqa
         await connect.execute(await Reviews.create_model_script())  # noqa
         await connect.execute(await News.create_model_script())  # noqa
+
     yield
 
 

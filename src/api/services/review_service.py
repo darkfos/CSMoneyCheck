@@ -8,10 +8,10 @@ from src.api.exceptions import ReviewExcp
 class ReviewService:
     @classmethod
     async def create_review(
-            cls,
-            new_review: CreateReview,
-            uow: UnitOfWork,
-            token_data: Dict[Union[str, int], Union[int, str, datetime.date]]
+        cls,
+        new_review: CreateReview,
+        uow: UnitOfWork,
+        token_data: Dict[Union[str, int], Union[int, str, datetime.date]],
     ) -> None:
         """
         Review Service: Создание отзыва

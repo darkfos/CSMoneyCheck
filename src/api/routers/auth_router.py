@@ -4,11 +4,11 @@ from typing import Annotated
 from fastapi import APIRouter, Depends, status
 from fastapi.responses import Response  # noqa
 from src.api.auth.auth_service import AuthService  # noqa
-from src.api.services.auth_service import AuthService as AuthServices
 from src.api.dto import AuthModel
 from src.api.dto.auth_dto import AuthUserData
 from src.api.dep import InterfaceUnitOfWork, UnitOfWork
 from src.api.services import UserService
+from src.configs import user_config
 from src.configs.logger_config import logger_dep
 from src.enums_cs import APIRouterTagsEnum, APIRouterPrefixEnum
 
@@ -72,20 +72,20 @@ async def login_user(
     )
 
 
-@auth_router.patch(
+@auth_router.post(
     path="/update_password",
     description="""
     Update user password
     """,
     summary="Update password - send email message",
     response_model=None,
-    status_code=status.HTTP_200_OK
+    status_code=status.HTTP_200_OK,
 )
 async def update_user_password_email(
-        logger: Annotated[Logger, Depends(logger_dep)],
-        uow: Annotated[InterfaceUnitOfWork, Depends(UnitOfWork)],
-        user_data: Annotated[dict, Depends(AuthService.verify_user)],
-        new_password: str
+    logger: Annotated[Logger, Depends(logger_dep)],
+    uow: Annotated[InterfaceUnitOfWork, Depends(UnitOfWork)],
+    user_data: Annotated[dict, Depends(AuthService.verify_user)],
+    new_password: str,
 ) -> None:
     """
     Update user password
@@ -96,5 +96,38 @@ async def update_user_password_email(
     :return:
     """
 
-    logger.info(msg=f"AUTH: Update user password id={user_data.get("sub")}")
-    await UserService.update_password_send_email(token_data=user_data, uow=uow, new_password=new_password) # noqa
+    logger.info(
+        msg=f"AUTH: Update user password id={user_data.get("sub")}",
+        extra=user_config,  # noqa
+    )
+    await UserService.update_password_send_email(
+        token_data=user_data, uow=uow, new_password=new_password
+    )  # noqa
+
+
+@auth_router.get(
+    path="/approve_upd_password",
+    description="""
+    Подтверждение обновления пароля пользователя
+    """,
+    summary="Обновление пароля пользователя",
+    response_model=None,
+    status_code=status.HTTP_204_NO_CONTENT,
+)
+async def approve_user_password(
+    logger: Annotated[Logger, Depends(logger_dep)],
+    uow: Annotated[InterfaceUnitOfWork, Depends(UnitOfWork)],
+    secret: str,
+    new_password: str,
+) -> None:
+    """
+    Подтверждение обновление пароля пользователя
+    :param logger:
+    :param uow:
+    :param secret:
+    :param new_password:
+    """
+
+    await UserService.update_password(
+        uow=uow, secret=secret, new_password=new_password
+    )  # noqa

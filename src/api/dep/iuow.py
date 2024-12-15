@@ -3,7 +3,7 @@ from typing import Type
 from src.database.postgres.repository import (
     UserRepository,
     UserTypeRepository,
-    ReviewsRepository
+    ReviewsRepository,
 )  # noqa
 
 
