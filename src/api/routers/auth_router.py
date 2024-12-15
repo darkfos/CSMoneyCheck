@@ -83,16 +83,18 @@ async def login_user(
 )
 async def update_user_password_email(
         logger: Annotated[Logger, Depends(logger_dep)],
+        uow: Annotated[InterfaceUnitOfWork, Depends(UnitOfWork)],
         user_data: Annotated[dict, Depends(AuthService.verify_user)],
         new_password: str
 ) -> None:
     """
     Update user password
     :param logger:
+    :param uow:
     :param user_data:
     :param new_password:
     :return:
     """
 
     logger.info(msg=f"AUTH: Update user password id={user_data.get("sub")}")
-    return await AuthServices.update_password_send_email(token_data=user_data, new_password=new_password) # noqa
+    await UserService.update_password_send_email(token_data=user_data, uow=uow, new_password=new_password) # noqa

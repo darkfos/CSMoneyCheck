@@ -6,6 +6,7 @@ from src.api.dep import InterfaceUnitOfWork
 from src.enums_cs import UserTypeEnum
 from src.api.exceptions import UserException
 from src.other import EmailWorker
+from src.other import generate_random_key
 
 
 class UserService:
@@ -61,7 +62,12 @@ class UserService:
             await UserException.no_acceptable_password()
 
     @classmethod
-    async def update_password_send_email(cls, token_data: dict, new_password: str) -> None:
+    async def update_password_send_email(
+            cls,
+            uow: InterfaceUnitOfWork,
+            token_data: dict,
+            new_password: str
+    ) -> None:
         """
         Send email message for confirm update
         :param token_data:
@@ -69,4 +75,12 @@ class UserService:
         :return:
         """
 
-        pass
+        async with uow:
+            generate_key = await generate_random_key()
+            is_upd_password = await uow.user_repository.update_user_secret_key(
+                id_model=int(token_data.get("sub")),
+                key=generate_key
+            )
+            if is_upd_password:
+                return None
+            print("No")

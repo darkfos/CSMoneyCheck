@@ -34,6 +34,20 @@ class UserRepository(
 
         pass
 
+    async def update_user_secret_key(self, id_model: int, key: str) -> None:
+        """
+        Update user secret key
+        :param id_model:
+        :param key:
+        """
+
+        async with self.session.acquire() as ls:
+            req = await ls.execute(
+                f"UPDATE {self.model.name} SET secret_key = $1 WHERE id = $2",
+                *(key, id_model)
+            ) # noqa
+            return req
+
     async def get_all_by_id(self, id_model: int) -> List[Record]:
         """
         Method repository for get all record from user table
@@ -56,7 +70,7 @@ class UserRepository(
 
         async with self.session.acquire() as ls:
             req = await ls.fetchrow(
-                f"SELECT * FROM {self.model.name} WHERE id = ?", *(id_model,)
+                f"SELECT * FROM {self.model.name} WHERE id = $1", *(id_model,)
             )
             return req
 
