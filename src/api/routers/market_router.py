@@ -5,12 +5,13 @@ from src.api.services import MarketService, MarketItemsData
 from typing import Annotated
 from logging import Logger
 from src.configs import user_config, logger_dep
+from src.enums_cs import APIRouterTagsEnum, APIRouterPrefixEnum  # noqa
 from src.api import redis, RedisWorker
 
 
 market_router: APIRouter = APIRouter(
-    prefix="/market",
-    tags=["Market"],
+    prefix=APIRouterPrefixEnum.MARKET_PREFIX.value,
+    tags=APIRouterTagsEnum.MARKET_TAGS.value,
 )
 
 

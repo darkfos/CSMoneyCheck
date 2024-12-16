@@ -24,7 +24,7 @@ class UserRepository(
         self.session = session
         super().__init__(model=self.model, session=self.session)
 
-    async def update_data(self, id_model: int, data_to_update) -> bool:
+    async def update_data(self, id_model: int, data_to_update: dict) -> bool:
         """
         Method repository for update data in user table
         :param id_model:
@@ -32,7 +32,27 @@ class UserRepository(
         :return:
         """
 
-        pass
+        async with self.session.acquire() as ls:
+            for data in data_to_update.items():
+                await ls.execute(
+                    f"UPDATE {self.model.name} SET {data[0]} = $1 WHERE id = $2",  # noqa
+                    *(data[1], id_model),
+                )
+            return True
+
+    async def update_user_secret_key(self, id_model: int, key: str) -> None:
+        """
+        Update user secret key
+        :param id_model:
+        :param key:
+        """
+
+        async with self.session.acquire() as ls:
+            req = await ls.execute(
+                f"UPDATE {self.model.name} SET secret_key = $1 WHERE id = $2",
+                *(key, id_model),
+            )  # noqa
+            return req
 
     async def get_all_by_id(self, id_model: int) -> List[Record]:
         """
@@ -56,7 +76,7 @@ class UserRepository(
 
         async with self.session.acquire() as ls:
             req = await ls.fetchrow(
-                f"SELECT * FROM {self.model.name} WHERE id = ?", *(id_model,)
+                f"SELECT * FROM {self.model.name} WHERE id = $1", *(id_model,)
             )
             return req
 
@@ -83,5 +103,17 @@ class UserRepository(
         async with self.session.acquire() as ls:
             req = await ls.fetch(
                 f"SELECT * FROM {self.model.name} WHERE email = $1", email
+            )
+            return req
+
+    async def find_by_secret(self, secret: str) -> Record:
+        """
+        Поиск пользователя по секретному ключу
+        :param secret:
+        """
+
+        async with self.session.acquire() as ls:
+            req = await ls.fetch(
+                f"SELECT * FROM {self.model.name} WHERE secret_key = $1", secret  # noqa
             )
             return req

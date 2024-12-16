@@ -30,3 +30,10 @@ class UserException:
             status_code=status.HTTP_406_NOT_ACCEPTABLE,
             detail="No right refresh token",  # noqa
         )
+
+    @classmethod
+    async def no_update_user_password(cls) -> None:
+        raise HTTPException(
+            status_code=status.HTTP_406_NOT_ACCEPTABLE,
+            detail="Не удалось обновить пароль",
+        )

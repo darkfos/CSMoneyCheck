@@ -12,6 +12,7 @@ class Users(ModelInterface):
         hashed_password: str = None,
         username: str = None,
         date_reg: datetime.date = None,
+        secret_key: str = None,
         id_user_type: int = None,
     ) -> None:
         self.__name: Final[str] = ModelsEnum.USER.value
@@ -21,6 +22,7 @@ class Users(ModelInterface):
         self.__email = email
         self.__hashed_password = hashed_password
         self.__username = username
+        self.__secret_key = secret_key
         self.__date_reg = date_reg
 
     @staticmethod
@@ -32,6 +34,7 @@ class Users(ModelInterface):
         email TEXT UNIQUE,
         hashed_password BYTEA,
         username VARCHAR(155),
+        secret_key TEXT,
         date_reg DATE,
         FOREIGN KEY (id_user_type) REFERENCES usertype (id)
         )
@@ -39,7 +42,7 @@ class Users(ModelInterface):
 
     @staticmethod
     async def values_for_create() -> str:
-        return "($1, $2, $3, $4, $5)"
+        return "($1, $2, $3, $4, $5, $6)"
 
     async def columns(self) -> tuple[str]:
         return (
@@ -47,6 +50,7 @@ class Users(ModelInterface):
             "email",
             "hashed_password",
             "username",
+            "secret_key",
             "date_reg",
         )  # noqa
 
@@ -56,6 +60,7 @@ class Users(ModelInterface):
             self.__email,
             self.__hashed_password,
             self.__username,
+            self.__secret_key,
             self.__date_reg,
         )
 
