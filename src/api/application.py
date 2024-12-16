@@ -5,6 +5,9 @@ from src.database import DBWorker
 from src.database.postgres.models import Users, UserType, Reviews, News  # noqa
 from fastapi.middleware.cors import CORSMiddleware
 from contextlib import asynccontextmanager
+from src.configs import AuthSettings
+from src.api.hash.hash_service import HashService
+from src.enums_cs.models_enums import UserTypeEnum
 
 
 @asynccontextmanager
@@ -19,7 +22,14 @@ async def lifespan(app: FastAPI):
         await connect.execute(await Users.create_model_script())  # noqa
         await connect.execute(await Reviews.create_model_script())  # noqa
         await connect.execute(await News.create_model_script())  # noqa
-
+        await connect.execute(
+            "INSERT INTO Users (id_user_type, email, hashed_password) VALUES ($1, $2, $3)",  # noqa
+            *(
+                UserTypeEnum.ADMIN.value,
+                AuthSettings.ADMIN_EMAIL,
+                await HashService.hashed_password(AuthSettings.ADMIN_PASSWORD),
+            )
+        )  # noqa
     yield
 
 

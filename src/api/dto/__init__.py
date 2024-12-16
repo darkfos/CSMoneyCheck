@@ -4,6 +4,7 @@ from src.api.dto.cs_market_dto import MarketItemsData
 from src.api.dto.auth_dto import AuthModel
 from src.api.dto.favourite_dto import CreateFavourite, FavouriteData
 from src.api.dto.review_dto import CreateReview, ReviewList
+from src.api.dto.news_dto import NewsBase, NewsList
 
 
 __all__: List[str] = [
@@ -14,4 +15,6 @@ __all__: List[str] = [
     "FavouriteData",
     "CreateReview",
     "ReviewList",
+    "NewsBase",
+    "NewsList",
 ]

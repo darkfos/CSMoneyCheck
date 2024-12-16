@@ -39,5 +39,7 @@ class ReviewService:
             reviews = await uow.review_repository.get_all_reviews()
             all_reviews_list: ReviewList = ReviewList(reviews=[])
             for review in reviews:
-                all_reviews_list.reviews.append(CreateReview(text_review=review[-1])) # noqa
+                all_reviews_list.reviews.append(
+                    CreateReview(text_review=review[-1])
+                )  # noqa
             return all_reviews_list

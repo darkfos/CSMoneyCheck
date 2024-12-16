@@ -3,6 +3,7 @@ from src.database.postgres.repository import (
     UserRepository,
     UserTypeRepository,
     ReviewsRepository,
+    NewsRepository,
 )  # noqa
 from src.database.postgres.db_worker import DBWorker
 
@@ -18,6 +19,9 @@ class UnitOfWork(InterfaceUnitOfWork):
             session=self.db.pool
         )  # noqa
         self.review_repository: ReviewsRepository = ReviewsRepository(
+            session=self.db.pool
+        )  # noqa
+        self.news_repository: NewsRepository = NewsRepository(
             session=self.db.pool
         )  # noqa
 

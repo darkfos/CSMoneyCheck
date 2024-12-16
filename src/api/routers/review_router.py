@@ -7,6 +7,8 @@ from src.api.auth.auth_service import AuthService
 from src.configs import logger_dep, user_config  # noqa
 from src.enums_cs import APIRouterTagsEnum, APIRouterPrefixEnum
 from src.api.dto import CreateReview, ReviewList  # noqa
+from src.api.dep import redis
+from src.database.redis.redis_worker import RedisWorker
 from typing import Annotated
 
 
@@ -53,6 +55,7 @@ async def add_review(
 )
 async def all_reviews(
     uow: Annotated[InterfaceUnitOfWork, Depends(UnitOfWork)],
+    redis_db: Annotated[RedisWorker, Depends(redis)],
     logger: Annotated[Logger, Depends(logger_dep)],
 ) -> ReviewList:
     """
@@ -61,4 +64,10 @@ async def all_reviews(
     :param logger:
     """
 
-    return await ReviewService.get_all(uow=uow)
+    redis_data = await redis_db.get_value(key="reviews")
+    if redis_data:
+        return redis_data
+    else:
+        news = await ReviewService.get_all(uow=uow)
+        await redis_db.set_key(key="reviews", value=news.json())
+        return news

@@ -21,6 +21,7 @@ from src.database.postgres.repository.user_type_repository import (
 from src.database.postgres.repository.reviews_repository import (
     ReviewsRepository,
 )  # noqa
+from src.database.postgres.repository.news_repository import NewsRepository  # noqa
 
 
 __all__: List[str] = [
@@ -32,4 +33,5 @@ __all__: List[str] = [
     "UserTypeRepository",
     "UserRepository",
     "ReviewsRepository",
+    "NewsRepository",
 ]
