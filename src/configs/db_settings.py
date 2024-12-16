@@ -12,3 +12,5 @@ class DatabaseSettings:
     REDIS_PORT: Final[int] = int(getenv("REDIS_PORT"))
     REDIS_DB: Final[int] = int(getenv("REDIS_DB"))
     MONGODB: Final[str] = getenv("MONGODB_URL")
+    RABBIT_MQ_URI: Final[str] = getenv("RABBIT_MQ_URI")
+    RABBIT_MQ_PORT: Final[int] = int(getenv("RABBIT_MQ_PORT"))

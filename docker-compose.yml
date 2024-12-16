@@ -1,0 +1,74 @@
+services:
+  database:
+    container_name: postgres_db
+    image: postgres:13-alpine
+    environment:
+      - POSTGRES_DB=${DB_NAME}
+      - POSTGRES_USER=${DB_USER}
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
+    ports:
+      - "5455:5432"
+    restart: always
+    networks:
+      - csmoney_bridge
+  redis:
+    container_name: redis_db
+    image: redis:7.4.1-alpine3.20
+    ports:
+      - "6478:6379"
+    restart: always
+    depends_on:
+      - backend
+    networks:
+      - csmoney_bridge
+  backend:
+    container_name: backend_csmoney
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    restart: always
+    depends_on:
+      - database
+    env_file:
+      - .env
+    networks:
+      - csmoney_bridge
+  rabbitmq:
+    container_name: rabbit_brocker
+    image: rabbitmq:4.1-rc-alpine
+    ports:
+      - "5677:5672"
+    depends_on:
+      - backend
+    networks:
+      - csmoney_bridge
+  backend_brock:
+    container_name: brock
+    build:
+      context: .
+      dockerfile: Dockerfile.brock
+    ports:
+      - "8989:8767"
+    restart: always
+    depends_on:
+      - rabbitmq
+    env_file:
+      - .env
+    networks:
+      - csmoney_bridge
+  mongo:
+    container_name: mongo_db
+    image: mongo:latest
+    ports:
+      - "28017:27017"
+    command: --noauth
+    depends_on:
+      - backend
+    networks:
+      - csmoney_bridge
+
+networks:
+  csmoney_bridge:
+    driver: bridge

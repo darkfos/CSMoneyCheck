@@ -37,4 +37,4 @@ app.include_router(api_v1_router)
 def run_app() -> None:
     # Start project
 
-    uvicorn.run(app=app, host="127.0.0.1", port=8000)
+    uvicorn.run(app=app, host="0.0.0.0", port=8000)
