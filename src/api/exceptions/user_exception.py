@@ -37,3 +37,10 @@ class UserException:
             status_code=status.HTTP_406_NOT_ACCEPTABLE,
             detail="Не удалось обновить пароль",
         )
+
+    @classmethod
+    async def no_update_username(cls) -> None:
+        raise HTTPException(
+            status_code=status.HTTP_406_NOT_ACCEPTABLE,
+            detail="Не удалось обновить пользовательское имя",
+        )

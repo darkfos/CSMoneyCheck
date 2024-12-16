@@ -7,6 +7,7 @@ from src.api.auth.auth_service import AuthService  # noqa
 from src.api.dto import AuthModel
 from src.api.dto.auth_dto import AuthUserData
 from src.api.dep import InterfaceUnitOfWork, UnitOfWork
+from src.api.exceptions import UserException
 from src.api.services import UserService
 from src.configs import user_config
 from src.configs.logger_config import logger_dep
@@ -40,6 +41,7 @@ async def register_user(
     """
 
     logger.info(msg=f"Auth: Регистрация пользователя email={user_data.email}")  # noqa
+
     await UserService.create_new_user(user_data=user_data, uow=uow)
 
 
@@ -58,7 +60,9 @@ async def login_user(
     user_data: AuthUserData,
     response: Response,
 ) -> None:
+
     logger.info(msg=f"Auth: авторизация пользователя email={user_data.email}")  # noqa
+
     token_data: AuthModel = await UserService.login_user(
         user_data=user_data, uow=uow
     )  # npqa
@@ -100,6 +104,7 @@ async def update_user_password_email(
         msg=f"AUTH: Update user password id={user_data.get("sub")}",
         extra=user_config,  # noqa
     )
+
     await UserService.update_password_send_email(
         token_data=user_data, uow=uow, new_password=new_password
     )  # noqa
@@ -128,6 +133,39 @@ async def approve_user_password(
     :param new_password:
     """
 
+    logger.info(msg="Approve user password", extra=user_config)
+
     await UserService.update_password(
         uow=uow, secret=secret, new_password=new_password
     )  # noqa
+
+
+@auth_router.patch(
+    path="/update_username",
+    description="Обновление пользовательского имени",
+    summary="Обновление username",
+    response_model=None,
+    status_code=status.HTTP_204_NO_CONTENT,
+)
+async def update_user_name(
+    logger: Annotated[Logger, Depends(logger_dep)],
+    uow: Annotated[InterfaceUnitOfWork, Depends(UnitOfWork)],
+    user_data: Annotated[dict, Depends(AuthService.verify_user)],
+    new_username: str,
+) -> None:
+    """
+    AUTH ROUTER update username
+    :param logger:
+    :param uow:
+    :param user_data:
+    :param new_password:
+    """
+
+    logger.info(msg="Update user name", extra=user_config)
+
+    if len(new_username) > 155:
+        await UserException.no_update_user_password()
+
+    await UserService.update_username(
+        uow=uow, token_data=user_data, new_username=new_username
+    )

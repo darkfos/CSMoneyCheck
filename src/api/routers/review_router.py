@@ -41,6 +41,8 @@ async def add_review(
     :new_review:
     """
 
+    logger.info(msg="Create review by user", extra=user_config)
+
     await ReviewService.create_review(
         token_data=user_data, uow=uow, new_review=new_review
     )
@@ -63,6 +65,8 @@ async def all_reviews(
     :param uow:
     :param logger:
     """
+
+    logger.info(msg="Get all reviews by user", extra=user_config)
 
     redis_data = await redis_db.get_value(key="reviews")
     if redis_data:
