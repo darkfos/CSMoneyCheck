@@ -6,7 +6,7 @@ from src.api.services import ReviewService
 from src.api.auth.auth_service import AuthService
 from src.configs import logger_dep, user_config  # noqa
 from src.enums_cs import APIRouterTagsEnum, APIRouterPrefixEnum
-from src.api.dto import CreateReview
+from src.api.dto import CreateReview, ReviewList  # noqa
 from typing import Annotated
 
 
@@ -42,3 +42,23 @@ async def add_review(
     await ReviewService.create_review(
         token_data=user_data, uow=uow, new_review=new_review
     )
+
+
+@review_router.get(
+    path="/all",
+    description="""Получение всех отзывов""",
+    response_model=ReviewList,
+    status_code=status.HTTP_200_OK,
+    summary="Все отзывы",
+)
+async def all_reviews(
+    uow: Annotated[InterfaceUnitOfWork, Depends(UnitOfWork)],
+    logger: Annotated[Logger, Depends(logger_dep)],
+) -> ReviewList:
+    """
+    REVIEW ROUTER: Get all reviews
+    :param uow:
+    :param logger:
+    """
+
+    return await ReviewService.get_all(uow=uow)

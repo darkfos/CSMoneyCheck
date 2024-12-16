@@ -8,7 +8,8 @@ from typing import Dict
 
 async def send_email(data: Dict[str, str]) -> None:
     """
-    Отправка сообщений в брокер
+    Producers for send message in email
+    :param data:
     """
 
     connection: AbstractRobustConnection = await RabbitMQService.connect()

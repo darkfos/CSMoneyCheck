@@ -11,6 +11,12 @@ class EmailWorker:
 
     @classmethod
     def send_message(cls, url_update: str, email_user: str) -> None:
+        """
+        Send message in email
+        :param url_update:
+        :param email_user:
+        """
+
         with smtplib.SMTP("smtp.gmail.com", 587) as smtp_server:
             smtp_server.starttls()
             smtp_server.login(EmailConfig.EMAIL_URL, EmailConfig.EMAIL_PASSWORD)  # noqa

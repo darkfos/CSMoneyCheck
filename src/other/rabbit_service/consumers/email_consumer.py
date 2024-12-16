@@ -10,7 +10,7 @@ import json
 
 async def email_consumer() -> None:
     """
-    Обработка email сообшений
+    Consumer for proccess data in email queue
     """
 
     connection: AbstractRobustConnection = await RabbitMQService.connect()  # noqa

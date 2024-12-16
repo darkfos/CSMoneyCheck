@@ -2,7 +2,12 @@ from random import randint
 import string
 
 
-async def generate_random_key():
+async def generate_random_key() -> str:
+    """
+    Generate random secret key for update
+    user password
+    """
+
     lower_case = string.ascii_lowercase
     upper_case = lower_case.upper()
     numbers = "123456789"

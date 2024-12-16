@@ -40,3 +40,12 @@ class ReviewsRepository(GeneralRepository, GetOneInterface, GetAllInterface):  #
                 "SELECT * FROM reviews WHERE id_user = $1", id_model
             )  # noqa
             return req
+
+    async def get_all_reviews(self) -> List[Record]:
+        """
+        Get all reviews
+        """
+
+        async with self.session.acquire() as ls:
+            req = await ls.fetch("SELECT * FROM reviews")  # noqa
+            return req
