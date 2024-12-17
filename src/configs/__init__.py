@@ -12,5 +12,5 @@ __all__: List[str] = [
     "DatabaseSettings",
     "AuthSettings",
     "EmailConfig",
-    "OtherSettings"
+    "OtherSettings",
 ]  # noqa

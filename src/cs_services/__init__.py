@@ -4,4 +4,4 @@ from src.cs_services.profile_service import ProfileService
 from typing import List
 
 
-__all__: List[str] = ["CSMoneyParse", "CSMarketParse", "ProfileService"] # noqa
+__all__: List[str] = ["CSMoneyParse", "CSMarketParse", "ProfileService"]  # noqa

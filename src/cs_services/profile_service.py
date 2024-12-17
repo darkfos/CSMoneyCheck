@@ -14,10 +14,13 @@ class ProfileService:
         """
 
         async with ClientSession(OtherSettings.STEAMWEBAPI_URL) as session:
-            req = await session.get(url="inventory", params={
-                "key": OtherSettings.STEAMWEBAPI_TOKEN,
-                "steam_id": profile_id
-            })
+            req = await session.get(
+                url="inventory",
+                params={
+                    "key": OtherSettings.STEAMWEBAPI_TOKEN,
+                    "steam_id": profile_id,
+                },  # noqa
+            )
 
             if req.status == 200:
                 return await req.json()
@@ -32,10 +35,13 @@ class ProfileService:
         """
 
         async with ClientSession(OtherSettings.STEAMWEBAPI_URL) as session:
-            req = await session.get(url="item", params={
-                "key": OtherSettings.STEAMWEBAPI_TOKEN,
-                "market_hash_name": market_hash_name
-            })
+            req = await session.get(
+                url="item",
+                params={
+                    "key": OtherSettings.STEAMWEBAPI_TOKEN,
+                    "market_hash_name": market_hash_name,
+                },
+            )
 
             if req.status == 200:
                 return await req.json()

@@ -44,7 +44,9 @@ async def create_favourite(
     :return:
     """
 
-    logger.info(msg=f"FAVOURITE: User add item: {fav_data.items}", extra=user_config) # noqa
+    logger.info(
+        msg=f"FAVOURITE: User add item: {fav_data.items}", extra=user_config
+    )  # noqa
 
     return await FavouriteService.create_row_in_fav_collection(
         data=fav_data, token_data=user_data
@@ -113,7 +115,9 @@ async def delete_fav(
     :return:
     """
 
-    logger.info(msg=f"FAVOURITE: Delete favourite by id={id_fav}", extra=user_config) # noqa
+    logger.info(
+        msg=f"FAVOURITE: Delete favourite by id={id_fav}", extra=user_config
+    )  # noqa
 
     return await FavouriteService.delete_fav(
         token_data=user_data, id_fav=id_fav

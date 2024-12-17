@@ -29,10 +29,13 @@ async def lifespan(app: FastAPI):
                 *(
                     UserTypeEnum.ADMIN.value,
                     AuthSettings.ADMIN_EMAIL,
-                    await HashService.hashed_password(AuthSettings.ADMIN_PASSWORD),
+                    await HashService.hashed_password(
+                        AuthSettings.ADMIN_PASSWORD
+                    ),  # noqa
                 )
             )  # noqa
-        except Exception: pass
+        except Exception:
+            pass
     yield
 
 
