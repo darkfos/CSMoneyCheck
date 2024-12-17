@@ -22,14 +22,17 @@ async def lifespan(app: FastAPI):
         await connect.execute(await Users.create_model_script())  # noqa
         await connect.execute(await Reviews.create_model_script())  # noqa
         await connect.execute(await News.create_model_script())  # noqa
-        await connect.execute(
-            "INSERT INTO Users (id_user_type, email, hashed_password) VALUES ($1, $2, $3)",  # noqa
-            *(
-                UserTypeEnum.ADMIN.value,
-                AuthSettings.ADMIN_EMAIL,
-                await HashService.hashed_password(AuthSettings.ADMIN_PASSWORD),
-            )
-        )  # noqa
+
+        try:
+            await connect.execute(
+                "INSERT INTO Users (id_user_type, email, hashed_password) VALUES ($1, $2, $3)",  # noqa
+                *(
+                    UserTypeEnum.ADMIN.value,
+                    AuthSettings.ADMIN_EMAIL,
+                    await HashService.hashed_password(AuthSettings.ADMIN_PASSWORD),
+                )
+            )  # noqa
+        except Exception: pass
     yield
 
 

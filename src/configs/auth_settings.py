@@ -16,3 +16,4 @@ class AuthSettings:
     # ADMIN DATA
     ADMIN_EMAIL: Final[str] = getenv("ADMIN_EMAIL")
     ADMIN_PASSWORD: Final[str] = getenv("ADMIN_PASSWORD")
+    
