@@ -7,6 +7,10 @@ class RabbitMQService:
 
     @classmethod
     async def connect(cls) -> AbstractRobustConnection:
+        """
+        Connect to RabbitMQ
+        """
+
         cls.connection: AbstractRobustConnection = await connect_robust(
             f"amqp://guest:guest@{DatabaseSettings.RABBIT_MQ_URI}/"  # noqa
         )

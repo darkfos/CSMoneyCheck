@@ -16,6 +16,7 @@ class APIRouterPrefixEnum(Enum):
     REVIEWS_PREFIX: Final[str] = "/reviews"
     AUTH_PREFIX: Final[str] = "/auth"
     API_V1_PREFIX: Final[str] = "/api/v1"
+    PROFILE_PREFIX: Final[str] = "/profile"
 
 
 class APIRouterTagsEnum(Enum):
@@ -32,3 +33,4 @@ class APIRouterTagsEnum(Enum):
     REVIEWS_TAGS: List[str] = ["Reviews"]
     AUTH_TAGS: List[str] = ["Auth"]
     API_V1_TAGS: List[str] = ["API-V1"]
+    PROFILE_TAGS: List[str] = ["Profile"]

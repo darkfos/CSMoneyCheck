@@ -4,6 +4,7 @@ from src.database.postgres.repository import (
     UserRepository,
     UserTypeRepository,
     ReviewsRepository,
+    NewsRepository,
 )  # noqa
 
 
@@ -12,6 +13,7 @@ class InterfaceUnitOfWork(ABC):
     user_repository: Type[UserRepository]
     user_type_repository: Type[UserTypeRepository]
     review_repository: Type[ReviewsRepository]
+    news_repository: Type[NewsRepository]
 
     @abstractmethod
     async def __aenter__(self):

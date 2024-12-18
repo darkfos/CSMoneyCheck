@@ -120,3 +120,24 @@ class UserService:
                     if upd_password:
                         return None
             await UserException.no_update_user_password()
+
+    @classmethod
+    async def update_username(
+        cls, uow: InterfaceUnitOfWork, new_username: str, token_data: dict
+    ) -> None:  # noqa
+        """
+        User Service - Update username
+        :param uow:
+        :param new_username:
+        :param token_data:
+        """
+
+        async with uow:
+            is_upd = await uow.user_repository.update_data(
+                id_model=int(token_data.get("sub")),
+                data_to_update={"username": new_username},
+            )
+
+            if is_upd:
+                return
+            await UserException.no_update_username()

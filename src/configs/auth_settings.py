@@ -12,3 +12,7 @@ class AuthSettings:
     JWT_SECRET_LIVE: Final[int] = int(getenv("JWT_SECRET_LIVE"))
     JWT_REFRESH_LIVE: Final[int] = int(getenv("JWT_REFRESH_LIVE"))
     JWT_ALGORITHM: Final[str] = getenv("JWT_ALGORITHM")
+
+    # ADMIN DATA
+    ADMIN_EMAIL: Final[str] = getenv("ADMIN_EMAIL")
+    ADMIN_PASSWORD: Final[str] = getenv("ADMIN_PASSWORD")

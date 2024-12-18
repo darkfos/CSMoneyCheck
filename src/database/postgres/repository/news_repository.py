@@ -7,10 +7,10 @@ from src.database.postgres.models import News
 
 class NewsRepository(GeneralRepository, GetOneInterface):  # noqa
 
-    def __init__(self, pool: Pool):
-        self.pool = pool
+    def __init__(self, session: Pool):
+        self.pool = session
         self.model: News = News()
-        super().__init__(model=self.model, session=pool)
+        super().__init__(model=self.model, session=self.pool)
 
     async def get_one(self, id_model: int) -> Record:
         """

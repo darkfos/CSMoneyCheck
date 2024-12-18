@@ -5,6 +5,7 @@ from pydantic.v1.typing import Any
 
 from src.api.dto import FavouriteData
 from src.api.auth.auth_service import AuthService
+from src.configs import user_config
 from src.configs.logger_config import logger_dep
 from src.api.services.favourite_service import FavouriteService  # noqa
 from src.enums_cs import APIRouterTagsEnum, APIRouterPrefixEnum  # noqa
@@ -43,7 +44,9 @@ async def create_favourite(
     :return:
     """
 
-    logger.info(msg=f"FAVOURITE: User add item: {fav_data.items}")
+    logger.info(
+        msg=f"FAVOURITE: User add item: {fav_data.items}", extra=user_config
+    )  # noqa
 
     return await FavouriteService.create_row_in_fav_collection(
         data=fav_data, token_data=user_data
@@ -73,7 +76,8 @@ async def my_favourites(
     """
 
     logger.info(
-        msg=f"FAVOURITE: Get all favourites by id_user={user_data.get("sub")}"
+        msg=f"FAVOURITE: Get all favourites by id_user={user_data.get("sub")}",
+        extra=user_config,
     )  # noqa
     redis_req = await redis.get_value(key=f"my_fav_{user_data.get("sub")}")
 
@@ -111,7 +115,10 @@ async def delete_fav(
     :return:
     """
 
-    logger.info(msg=f"FAVOURITE: Delete favourite by id={id_fav}")
+    logger.info(
+        msg=f"FAVOURITE: Delete favourite by id={id_fav}", extra=user_config
+    )  # noqa
+
     return await FavouriteService.delete_fav(
         token_data=user_data, id_fav=id_fav
     )  # noqa
